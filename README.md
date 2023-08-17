@@ -1,9 +1,8 @@
 # pes_asic_class
 
 ## DAY 1
-sdijcsindc /n
-sdcjnsodnc
-sdcknosdncsd
-sdcknsodncoin
+sdijcsindc /n cskdj cksdjncksjdnckjsndcnsjdcnkjnsdkcjksjdcnkjsdncjnskjdnckjnskdnckjsndckjnssssssssssssssssssssss
+assssssssssss
+
 
 ## DAY 2

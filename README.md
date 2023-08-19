@@ -22,6 +22,7 @@ riscv64-unknown-elf-objdump -d sum1ton.o | less
 
 Typing "main" and then "n", we navigate the the main function of the code and we see the number of steps taken to run the code in assembly.
 ![image](https://github.com/AniruddhaN2203/pes_asic_class/assets/142299140/ddcd09de-4cb2-43cd-a091-b2cf15f25289)
+
 (101AC - 10184)/4 = A. "A" in decimal is 10, therefore 10 lines on assembly code.
 
 # Day 2

@@ -38,6 +38,9 @@ First we look at a command similar to ```./a.out``` for the riscv compiler. This
 Attached below is the main function disassembled:
 ![image](https://github.com/AniruddhaN2203/pes_asic_class/assets/142299140/919f6200-cc0a-4971-bae0-84f131ce5ee2)
 
-Now to open the spike debugger we type the following command : ```spike -d pk (filename).o```. If we want the program to run partially till a particular intruction of choice then we can use the command 
-```until pc 0 (line number: eg 100b0)```
+Now to open the spike debugger we type the following command : ```spike -d pk (filename).o```. If we want the program to run partially till a particular intruction of choice then we can use the command
+
+```
+until pc 0 (line number: eg 100b0)
+```
 # Day 2

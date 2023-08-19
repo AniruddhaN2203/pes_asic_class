@@ -48,5 +48,14 @@ To find the contents of a variable we use the command : ```reg 0 (variable name)
 
 ![image](https://github.com/AniruddhaN2203/pes_asic_class/assets/142299140/c8b73195-1f90-4f91-9205-0ad74698d9eb)
 
+## C Program for highest and lowest signed and unsigned integers
+![image](https://github.com/AniruddhaN2203/pes_asic_class/assets/142299140/8c607ae3-1a3f-4840-a053-eccad4bd2188)
+
+![image](https://github.com/AniruddhaN2203/pes_asic_class/assets/142299140/cbe13532-6a4f-4555-a0e1-738a9cb9c1fe)
+
+![image](https://github.com/AniruddhaN2203/pes_asic_class/assets/142299140/9bfef03b-a424-4919-baa3-4bbb4514a12f)
+
+![image](https://github.com/AniruddhaN2203/pes_asic_class/assets/142299140/6e3b6e40-05bb-454e-b2b0-fecc34be32b4)
+
 
 # Day 2

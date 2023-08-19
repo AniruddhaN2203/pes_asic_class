@@ -12,6 +12,16 @@
 ![image](https://github.com/AniruddhaN2203/pes_asic_class/assets/142299140/4e4d64ae-27cd-4df6-86a4-939135d090c3)
 ![image](https://github.com/AniruddhaN2203/pes_asic_class/assets/142299140/d60bafa4-30c6-40de-addc-77a7f0ded8ad)
 
+## RISCV GCC Compile and Disassemble
+Running with the GCC compiler we can compile the program by using the command 
+'''
+riscv64-unknown-elf-gcc -O1 -mabi=lp64 -march=rv64i -o sum1ton.o sum1ton.c
+riscv64-unknown-elf-objdump -d sum1ton.o | less
+'''
+![image](https://github.com/AniruddhaN2203/pes_asic_class/assets/142299140/e5841a7a-391c-4580-88a0-d7773f8c7c80)
 
+Typing "main" and then "n", we navigate the the main function of the code and we see the number of steps taken to run the code in assembly.
+![image](https://github.com/AniruddhaN2203/pes_asic_class/assets/142299140/ddcd09de-4cb2-43cd-a091-b2cf15f25289)
+(101AC - 10184)/4 = A. "A" in decimal is 10, therefore 10 lines on assembly code.
 
 # Day 2

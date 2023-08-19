@@ -12,6 +12,10 @@
 ![image](https://github.com/AniruddhaN2203/pes_asic_class/assets/142299140/4e4d64ae-27cd-4df6-86a4-939135d090c3)
 ![image](https://github.com/AniruddhaN2203/pes_asic_class/assets/142299140/d60bafa4-30c6-40de-addc-77a7f0ded8ad)
 
+```
+DISCLAIMER: ani2203 and aniruddhan are both my own pcs. ani2203 is my second VM and aniruddhan is my third VM. I made aniruddhan because i hadnt allocated enough RAM for the second pc.
+```
+
 ## RISCV GCC Compile and Disassemble
 Running with the GCC compiler we can compile the program by using the command 
 ```

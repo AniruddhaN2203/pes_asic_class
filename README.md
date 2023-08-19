@@ -14,10 +14,10 @@
 
 ## RISCV GCC Compile and Disassemble
 Running with the GCC compiler we can compile the program by using the command 
-'''
+```
 riscv64-unknown-elf-gcc -O1 -mabi=lp64 -march=rv64i -o sum1ton.o sum1ton.c
 riscv64-unknown-elf-objdump -d sum1ton.o | less
-'''
+```
 ![image](https://github.com/AniruddhaN2203/pes_asic_class/assets/142299140/e5841a7a-391c-4580-88a0-d7773f8c7c80)
 
 Typing "main" and then "n", we navigate the the main function of the code and we see the number of steps taken to run the code in assembly.

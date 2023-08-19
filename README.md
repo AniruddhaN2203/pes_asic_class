@@ -30,4 +30,14 @@ Typing "main" and then "n", we navigate the the main function of the code and we
 
 (101AC - 10184)/4 = A. "A" in decimal is 10, therefore 10 lines on assembly code.
 
+## Spike Simulation and Debug
+First we look at a command similar to ```./a.out``` for the riscv compiler. This command is used to show the output which is displayed when the riscv compiler is used. The command is as follows
+```spike pk (filename).o```
+![image](https://github.com/AniruddhaN2203/pes_asic_class/assets/142299140/aa44b1a7-a039-43c3-bb76-8031a6d19a4c)
+
+Attached below is the main function disassembled:
+![image](https://github.com/AniruddhaN2203/pes_asic_class/assets/142299140/919f6200-cc0a-4971-bae0-84f131ce5ee2)
+
+Now to open the spike debugger we type the following command : ```spike -d pk (filename).o```. If we want the program to run partially till a particular intruction of choice then we can use the command 
+```until pc 0 (line number: eg 100b0)```
 # Day 2

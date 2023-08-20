@@ -13,7 +13,7 @@
   - [C Program for highest and lowest signed and unsigned integers](#c-program-for-highest-and-lowest-signed-and-unsigned-integers)
 
 ## Day 2
-  - [Programs written for the day]
+  - [Programs written for the day](https://github.com/AniruddhaN2203/pes_asic_class/tree/main/DAY2)
   - [Application Binary Interface](#application-binary-interface)
   - [Memory Allocation for Double Words](#memory-allocation-for-double-words)
   - [Load, Add and Store Instructions](#load,-add-and-store-instructions)

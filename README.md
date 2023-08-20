@@ -6,6 +6,7 @@
 
 # Contents
 ## Day 1
+  - [Programs written for the day](https://github.com/AniruddhaN2203/pes_asic_class/tree/main/DAY1)
   - [Running a simple C program](#Running-a-Simple-C-program)
   - [RISCV GCC Compile and Disassemble](RISCV-GCC-Compile-and-Disassemble)
   - [Spike Simulation and Debug](Spike-Simulation-and-Debug)

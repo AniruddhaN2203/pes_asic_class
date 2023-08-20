@@ -7,7 +7,7 @@
 # Contents
 ## Day 1
   - [Programs written for the day](https://github.com/AniruddhaN2203/pes_asic_class/tree/main/DAY1)
-  - [Running a simple C program]()
+  - [Running a simple C program](#Running-a-simple-C-program)
   - [RISCV GCC Compile and Disassemble](#RISCV-GCC-Compile-and-Disassemble)
   - [Spike Simulation and Debug](#Spike-Simulation-and-Debug)
   - [C Program for highest and lowest signed and unsigned integers](#C-Program-for-highest-and-lowest-signed-and-unsigned-integers)

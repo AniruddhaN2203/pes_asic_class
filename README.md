@@ -66,4 +66,4 @@ To find the contents of a variable we use the command : ```reg 0 (variable name)
 
 # Day 2
 ## Application Binary Interface
-When an application needs to use the harware resources of a system it is working on, it uses these resources with the help of system calls. These system calls are performed through an interface called the Application Binary Interface(ABI). It is also called thr System Call Interface.
+When an application needs to use the harware resources of a system it is working on, it uses these resources with the help of system calls. These system calls are performed through an interface called the Application Binary Interface(ABI). It is also called the System Call Interface.

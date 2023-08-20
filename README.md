@@ -18,6 +18,7 @@
   - [Memory Allocation for Double Words](#memory-allocation-for-double-words)
   - [Load, Add and Store Instructions](#load,-add-and-store-instructions)
   - [ABI Names](#abi-names)
+  - [Sum of Numbers From 1 to n using ASM]()
 
 # Day 1
 - First we look at the introduction to the RISC-V ISA(Instructiion Set Architecture). Supposing we need to execute a C program on a particular hardware. First the C-program is converted into Assembly Code( here for RISC-V processor). Then the assembly code is converted into binary. An RTL implements this code for the particular layout of the RISC-V processor and the output is visible.
@@ -142,3 +143,16 @@ The instruction set is stored an executed as follows:
 These are the names a user uses to access the registers of the RISC-V CPU core.
 
 ![image](https://github.com/AniruddhaN2203/pes_asic_class/assets/142299140/ec154293-cd7f-4454-9e19-09ff081d992f)
+
+## Sum of Numbers from 1 to n using ASM
+We write two programs here, one in C and one in assembly. We process the main part of the program in ASM and display the result through the C program
+
+![image](https://github.com/AniruddhaN2203/pes_asic_class/assets/142299140/8a90acaf-6545-486d-9232-14fdfb09c312)
+
+![image](https://github.com/AniruddhaN2203/pes_asic_class/assets/142299140/6caf6a5d-6d1d-4f9b-b53b-f62aaf8472f5)
+
+![image](https://github.com/AniruddhaN2203/pes_asic_class/assets/142299140/e52d0f6e-ebd5-483f-b4ce-0ad47c7b9514)
+
+![image](https://github.com/AniruddhaN2203/pes_asic_class/assets/142299140/56ddc858-81c1-4421-8900-a09394835113)
+
+

@@ -7,16 +7,16 @@
 # Contents
 ## Day 1
   - [Programs written for the day](https://github.com/AniruddhaN2203/pes_asic_class/tree/main/DAY1)
-  - [Running a simple C program](Running-a-Simple-C-program)
-  - [RISCV GCC Compile and Disassemble](RISCV-GCC-Compile-and-Disassemble)
-  - [Spike Simulation and Debug](Spike-Simulation-and-Debug)
-  - [C Program for highest and lowest signed and unsigned integers](C-Program-for-highest-and-lowest-signed-and-unsigned-integers)
+  - [Running a simple C program](#Running-a-Simple-C-program)
+  - [RISCV GCC Compile and Disassemble](#RISCV-GCC-Compile-and-Disassemble)
+  - [Spike Simulation and Debug](#Spike-Simulation-and-Debug)
+  - [C Program for highest and lowest signed and unsigned integers](#C-Program-for-highest-and-lowest-signed-and-unsigned-integers)
 
 ## Day 2
   - [Programs written for the day]
-  - [Application Binary Interface](Application-Binary-Interface)
-  - [Memory Allocation for Double Words](Memory-Allocation-for-Double-Words)
-  - [Load, Add and Store Instructions](Load,-Add-and-Store-Instructions)
+  - [Application Binary Interface](#Application-Binary-Interface)
+  - [Memory Allocation for Double Words](#Memory-Allocation-for-Double-Words)
+  - [Load, Add and Store Instructions](#Load,-Add-and-Store-Instructions)
 
 # Day 1
 - First we look at the introduction to the RISC-V ISA(Instructiion Set Architecture). Supposing we need to execute a C program on a particular hardware. First the C-program is converted into Assembly Code( here for RISC-V processor). Then the assembly code is converted into binary. An RTL implements this code for the particular layout of the RISC-V processor and the output is visible.

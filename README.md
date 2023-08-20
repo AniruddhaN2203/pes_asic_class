@@ -17,6 +17,7 @@
   - [Application Binary Interface](#application-binary-interface)
   - [Memory Allocation for Double Words](#memory-allocation-for-double-words)
   - [Load, Add and Store Instructions](#load,-add-and-store-instructions)
+  - [ABI Names](#abi-names)
 
 # Day 1
 - First we look at the introduction to the RISC-V ISA(Instructiion Set Architecture). Supposing we need to execute a C program on a particular hardware. First the C-program is converted into Assembly Code( here for RISC-V processor). Then the assembly code is converted into binary. An RTL implements this code for the particular layout of the RISC-V processor and the output is visible.
@@ -136,3 +137,8 @@ The instruction set is stored an executed as follows:
 - A combination of funct3 and opcode stores the sd command which is 3 and 7 bits respectively.
 - The offest 8 is stored as immediate where the first 5 bits are stores in immediate[4:0] and the rest of the zeroes are stored in immediate[11:5]
 - The data register x10 is stored in rs2 as 5 bits and source register x16 in rs1 as 5 bits
+
+## ABI Names
+These are the names a user uses to access the registers of the RISC-V CPU core.
+
+![image](https://github.com/AniruddhaN2203/pes_asic_class/assets/142299140/ec154293-cd7f-4454-9e19-09ff081d992f)

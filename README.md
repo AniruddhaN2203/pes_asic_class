@@ -197,3 +197,12 @@ gtkwave tb_good_mux.vcd
 - We can obtain the waveform by dragging and dropping the inputs and outputs in the signals window and clicking zoom fit to see them properly.
 
 ![image](https://github.com/AniruddhaN2203/pes_asic_class/assets/142299140/a0683603-b2d8-41cd-a97c-3aa281c8e7f5)
+
+The following are the programs we just executed and analyzed the waveform of:
+
+![image](https://github.com/AniruddhaN2203/pes_asic_class/assets/142299140/36b68412-18bb-4ad0-9281-f08b23f43c72)
+
+![image](https://github.com/AniruddhaN2203/pes_asic_class/assets/142299140/d8f5d603-a0a7-422e-a9ee-504c65df3cb2)
+
+
+

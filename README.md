@@ -214,6 +214,8 @@ The following are the programs we just executed and analyzed the waveform of:
 - We load the same in gtkwave. The output observed should be same as that observed during RTL simulation.
 
 **Introduction to Logic Synthesis**
-
+- RTL to gate level translation is what we define as synthesis
+- The RTL file and the front end library file is put through the process of synthesis to get a netlist.
+- The .lib file is a collection of logical modules. It includes the basic logic gates like AND,OR,NOT etc. It also contains different versions of the gate, for example: slow, medium and fast versions of the AND gate.
 
 

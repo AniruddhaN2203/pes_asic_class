@@ -173,7 +173,6 @@ We write two programs here, one in C and one in assembly. We process the main pa
 - Next we git clone the link that contains all the programs need to do the labs by using the following command(Must be done in the VLSI folder)
 ```
 git clone https://github.com/kunalg123/sky130RTLDesignAndSynthesisWorkshop.git
-
 ```
 ![image](https://github.com/AniruddhaN2203/pes_asic_class/assets/142299140/d0967659-c2f6-4c54-93c4-d7d3d6dbaec5)
 
@@ -190,7 +189,6 @@ iverilog good_mux.v tb_good_mux.v
 - This will make a .vcd file that we can analyze in gtkwave by using the command:
 ```
 gtkwave tb_good_mux.vcd
-
 ```
 ![image](https://github.com/AniruddhaN2203/pes_asic_class/assets/142299140/32c1903a-9c27-4190-9012-a36dd59cd33c)
 

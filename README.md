@@ -24,7 +24,7 @@
   - [Programs written for the day](https://github.com/AniruddhaN2203/pes_asic_class/tree/main/Iverilog_DAY_1)
   - [Iverilog Based Simulation Flow](#iverilog-based-simulation-flow)
   - [Labs Using Iverilog and gtkwave](#labs-using-iverilog-and-gtkwave)
-  - [Introduction to Yosys and Logic Synthesis](#introduction-to-yosys-and-logic-syntheisis)
+  - [Introduction to Yosys and Logic Synthesis](#introduction-to-yosys-and-logic-synthesis)
 
 # Day 1
 - First we look at the introduction to the RISC-V ISA(Instructiion Set Architecture). Supposing we need to execute a C program on a particular hardware. First the C-program is converted into Assembly Code( here for RISC-V processor). Then the assembly code is converted into binary. An RTL implements this code for the particular layout of the RISC-V processor and the output is visible.

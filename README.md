@@ -20,6 +20,10 @@
   - [ABI Names](#abi-names)
   - [Sum of Numbers From 1 to n using ASM](#sum-of-numbers-from-1-to-n-using-asm)
 
+## RTL design using Verilog with SKY130 Technology - Day 1
+  - [Iverilog Based Simulation Flow](#iverilog-based-simulation-flow)
+  - [Labs Using Iverilog and gtkwave](#labs-using-iverilog-and-gtkwave)
+
 # Day 1
 - First we look at the introduction to the RISC-V ISA(Instructiion Set Architecture). Supposing we need to execute a C program on a particular hardware. First the C-program is converted into Assembly Code( here for RISC-V processor). Then the assembly code is converted into binary. An RTL implements this code for the particular layout of the RISC-V processor and the output is visible.
 - An application running on a system is usually written with the help of a high level language such as C,C++,Python etc. The code of these applications are compiled with the help of compilers running on a system software(OS). The compiler converts the high level code into assembly intructions for the particular processor. The assembler then converts the instructions into binary which is fed into the layout of the chip that processes every pattern of bits and the program is hence run.
@@ -156,3 +160,10 @@ We write two programs here, one in C and one in assembly. We process the main pa
 ![image](https://github.com/AniruddhaN2203/pes_asic_class/assets/142299140/56ddc858-81c1-4421-8900-a09394835113)
 
 
+# RTL design using Verilog with SKY130 Technology - Day 1
+## Iverilog Based Simulation Flow
+
+- First we must have a design code and a test bench and feed both of them to the Iverilog simulator. The simulator is going to look for changes in the input and then accordingly dump the changes in the output. The output of the simulator is going to be a VCD file(value change dump).
+- For viewing the VCD file we will use another tool called gtkwave to view the output waveforms, where we can verify the functionality of the design.
+
+## Labs Using Iverilog and gtkwave

@@ -24,6 +24,7 @@
   - [Programs written for the day](https://github.com/AniruddhaN2203/pes_asic_class/tree/main/Iverilog_DAY_1)
   - [Iverilog Based Simulation Flow](#iverilog-based-simulation-flow)
   - [Labs Using Iverilog and gtkwave](#labs-using-iverilog-and-gtkwave)
+  - [Introduction to Yosys and Logic Synthesis](#introduction-to-yosys-and-logic-syntheisis)
 
 # Day 1
 - First we look at the introduction to the RISC-V ISA(Instructiion Set Architecture). Supposing we need to execute a C program on a particular hardware. First the C-program is converted into Assembly Code( here for RISC-V processor). Then the assembly code is converted into binary. An RTL implements this code for the particular layout of the RISC-V processor and the output is visible.
@@ -177,7 +178,7 @@ git clone https://github.com/kunalg123/sky130RTLDesignAndSynthesisWorkshop.git
 ```
 ![image](https://github.com/AniruddhaN2203/pes_asic_class/assets/142299140/d0967659-c2f6-4c54-93c4-d7d3d6dbaec5)
 
-**Introduction to Iverilog and gtkwave Part 1**
+**Introduction to Iverilog and gtkwave**
 - Going into the vsd folder and into the VLSI directory we type ```cd sky130RTLDesignAndSynthesisWorkshop/```. This is the directory we will be working with.
 - The first program we will be testing will be a 2:1 mux.
 - To do this we first have to get into the directory with the file of the design and test bench of the 2:1 MUX.
@@ -203,6 +204,16 @@ The following are the programs we just executed and analyzed the waveform of:
 ![image](https://github.com/AniruddhaN2203/pes_asic_class/assets/142299140/36b68412-18bb-4ad0-9281-f08b23f43c72)
 
 ![image](https://github.com/AniruddhaN2203/pes_asic_class/assets/142299140/d8f5d603-a0a7-422e-a9ee-504c65df3cb2)
+
+
+## Introduction to Yosys and Logic Synthesis
+**Introduction to Yosys**
+- Synthesizer is the tool used for converting RTL to netlist and yosys is the synthesizer
+- We have a design and a .lib file. Applying both the files to yosys we get a netlist file.
+- To verify the synthesis output, we use the netlist file and the testbench file and feed them both to iverilog and we get the vcd file.
+- We load the same in gtkwave. The output observed should be same as that observed during RTL simulation.
+
+**Introduction to Logic Synthesis**
 
 
 

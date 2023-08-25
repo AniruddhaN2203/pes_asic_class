@@ -167,3 +167,34 @@ We write two programs here, one in C and one in assembly. We process the main pa
 - For viewing the VCD file we will use another tool called gtkwave to view the output waveforms, where we can verify the functionality of the design.
 
 ## Labs Using Iverilog and gtkwave
+**Introduction to Labs**
+
+- First we go into the root users and create a new directory in home called as vsd. In vsd we make a new directory called as VLSI that we will be using for the future lab sessions.
+- Next we git clone the link that contains all the programs need to do the labs by using the following command(Must be done in the VLSI folder)
+```
+git clone https://github.com/kunalg123/sky130RTLDesignAndSynthesisWorkshop.git
+
+```
+![image](https://github.com/AniruddhaN2203/pes_asic_class/assets/142299140/d0967659-c2f6-4c54-93c4-d7d3d6dbaec5)
+
+**Introduction to Iverilog and gtkwave Part 1**
+- Going into the vsd folder and into the VLSI directory we type ```cd sky130RTLDesignAndSynthesisWorkshop/```. This is the directory we will be working with.
+- The first program we will be testing will be a 2:1 mux.
+- To do this we first have to get into the directory with the file of the design and test bench of the 2:1 MUX.
+- ```cd verilog_files/```
+- To run the program we can do so by using Iverilog and typing the command:
+```
+iverilog good_mux.v tb_good_mux.v
+```
+- As we can see an a.out file is created. We need to run that using ```./a.out```.
+- This will make a .vcd file that we can analyze in gtkwave by using the command:
+```
+gtkwave tb_good_mux.vcd
+
+```
+![image](https://github.com/AniruddhaN2203/pes_asic_class/assets/142299140/32c1903a-9c27-4190-9012-a36dd59cd33c)
+
+- In the gtkwave window, we need to click the file name which will display the list of inputs and outputs.
+- We can obtain the waveform by dragging and dropping the inputs and outputs in the signals window and clicking zoom fit to see them properly.
+
+![image](https://github.com/AniruddhaN2203/pes_asic_class/assets/142299140/a0683603-b2d8-41cd-a97c-3aa281c8e7f5)

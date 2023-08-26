@@ -251,4 +251,12 @@ to synthesize the design.
 ```
 abc -liberty ../my_lib//lib/sky130_fd_sc_hd__tt_025C_1v80.lib
 ```
-along with the appropriate file path. The logic of good_mux will be realised with the standard cells available in the library file mentioned above. That is the logic of the above command ```abd -liberty```.
+along with the appropriate file path. The logic of good_mux will be realised with the standard cells available in the library file mentioned above. That is the logic of the above command ```abc -liberty```.
+
+- The execution of this command also gives us some important information shown below
+
+![image](https://github.com/AniruddhaN2203/pes_asic_class/assets/142299140/741c1630-6ce3-4704-abdf-d1e91ed07abf)
+
+- Next we type the command ```show``` to display the synthesized design.
+
+![image](https://github.com/AniruddhaN2203/pes_asic_class/assets/142299140/f5efa573-fe12-4432-8957-5bc5298e904d)

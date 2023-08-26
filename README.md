@@ -275,4 +275,6 @@ write_verilog good_mux_netlist.v
 write_verilog -noaatr good_mux_netlist.v
 ```
 
+![image](https://github.com/AniruddhaN2203/pes_asic_class/assets/142299140/8ca12ba3-cb83-4adc-8a44-4ac77d2916d5)
+
 ```This version of the program has been attached in the source files.```

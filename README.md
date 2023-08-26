@@ -260,3 +260,17 @@ along with the appropriate file path. The logic of good_mux will be realised wit
 - Next we type the command ```show``` to display the synthesized design.
 
 ![image](https://github.com/AniruddhaN2203/pes_asic_class/assets/142299140/f5efa573-fe12-4432-8957-5bc5298e904d)
+
+- To check the netlist file we use the command:
+```
+write_verilog good_mux_netlist.v
+```
+- Any meaningful name can be given to the netlist file.
+- Now we type ```!gedit good_mux_netlist.v``` to view the file.
+
+![image](https://github.com/AniruddhaN2203/pes_asic_class/assets/142299140/967281cd-fd51-4a21-bb43-347983761b02)
+
+- To view a neater version of the above program we type the command
+```
+write_verilog -noaatr good_mux_netlist.v
+```

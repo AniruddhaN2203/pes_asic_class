@@ -221,4 +221,16 @@ The following are the programs we just executed and analyzed the waveform of:
 - If we use too many fast cells, then the circuit may become bad in terms of power and area. There may also be hold time violations
 - If we use too many slow cells, the circuit may become sluggish and may not meet the required criteria.
 
+**Lab Using yosys and Sky130 PDKs**
+- First of all as usual we go into the directory with the files that we need to work with
+
+![image](https://github.com/AniruddhaN2203/pes_asic_class/assets/142299140/bf12626d-312e-4697-9b47-2eab9a966d17)
+
+- Now for ease of execution of the programs, we move the ```lib``` folder into the ```my_lib``` folder using the command
+```
+mv lib my_lib/
+```
+![Screenshot from 2023-08-26 12-40-39](https://github.com/AniruddhaN2203/pes_asic_class/assets/142299140/1d1f09c3-c33d-437d-a5a5-788c10915e1e)
+
+
 

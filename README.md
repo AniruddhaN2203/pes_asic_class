@@ -282,3 +282,5 @@ write_verilog -noaatr good_mux_netlist.v
 ```This version of the program has been attached in the source files.```
 
 - i0 and i1 are our primary inputs, sel is our select line and y is our output.
+
+# RTL design using Verilog with SKY130 Technology - Day 2

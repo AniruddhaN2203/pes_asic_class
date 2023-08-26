@@ -233,7 +233,7 @@ mv lib my_lib/
 ![Screenshot from 2023-08-26 12-40-39](https://github.com/AniruddhaN2203/pes_asic_class/assets/142299140/1d1f09c3-c33d-437d-a5a5-788c10915e1e)
 
 - Next we type ```yosys``` to invoke the Yosys tool from the ```verilog_files``` folder.
-- Then we use the command:
+- Then we use the command
 ```
 read_liberty -lib ../my_lib/lib/sky130_fd_sc_hd__tt_025C_1v80.lib
 ```
@@ -246,3 +246,9 @@ synth -top good_mux
 to synthesize the design.
 
 ![image](https://github.com/AniruddhaN2203/pes_asic_class/assets/142299140/0eddc264-c8bf-49e7-9803-43b25d9937c5)
+
+- To generate the netlist we now use the command
+```
+abc -liberty ../my_lib//lib/sky130_fd_sc_hd__tt_025C_1v80.lib
+```
+along with the appropriate file path. The logic of good_mux will be realised with the standard cells available in the library file mentioned above. That is the logic of the above command ```abd -liberty```.

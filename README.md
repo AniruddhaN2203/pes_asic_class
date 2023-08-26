@@ -217,5 +217,8 @@ The following are the programs we just executed and analyzed the waveform of:
 - RTL to gate level translation is what we define as synthesis
 - The RTL file and the front end library file is put through the process of synthesis to get a netlist.
 - The .lib file is a collection of logical modules. It includes the basic logic gates like AND,OR,NOT etc. It also contains different versions of the gate, for example: slow, medium and fast versions of the AND gate.
+- Some cells should be fast in order to meet the performance rates and we need some slow cells to meet the "hold" condition.
+- If we use too many fast cells, then the circuit may become bad in terms of power and area. There may also be hold time violations
+- If we use too many slow cells, the circuit may become sluggish and may not meet the required criteria.
 
 

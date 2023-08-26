@@ -270,9 +270,9 @@ write_verilog good_mux_netlist.v
 
 ![image](https://github.com/AniruddhaN2203/pes_asic_class/assets/142299140/967281cd-fd51-4a21-bb43-347983761b02)
 
-This version of the program has been attached in the source files.
-
 - To view a neater version of the above program we type the command
 ```
 write_verilog -noaatr good_mux_netlist.v
 ```
+
+```This version of the program has been attached in the source files.```

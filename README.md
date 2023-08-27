@@ -380,3 +380,14 @@ This will give us the netlist file in a more readable format. We can now open th
 
 The [program](https://github.com/AniruddhaN2203/pes_asic_class/blob/main/Iverilog%20DAY_2/multiple_modules_hier.v) opened from the above command has and AND gate and an OR gate, which have two inpits each respectively.
 
+If we use the command
+```
+flatten
+```
+the hierarchies won't be preserved and we will get an even more concise program
+
+![image](https://github.com/AniruddhaN2203/pes_asic_class/assets/142299140/a5405e45-a44b-426c-adff-453cf18eb5ec)
+
+![image](https://github.com/AniruddhaN2203/pes_asic_class/assets/142299140/1f371c9c-21b5-4940-909e-3471bb2b950f)
+
+We get direct instantiations of the AND gate and the OR gate.

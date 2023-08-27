@@ -312,6 +312,11 @@ Now let us look at what it has to offer.
 
 - A keyword that is used pretty often in the library file is the "cell" keyword.
 - There a quite a lot of logic gates defined and also variations of the same type of logic gates.
-- 
+
+![image](https://github.com/AniruddhaN2203/pes_asic_class/assets/142299140/9f8106f8-d29c-4d1b-b829-60ca8ee16140)
+
+![image](https://github.com/AniruddhaN2203/pes_asic_class/assets/142299140/ac9651e8-5b51-419c-856d-31e8eac45d8a)
+
+- For the above defined cell we can see the corresponding verilog file
 
 

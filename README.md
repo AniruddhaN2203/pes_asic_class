@@ -364,3 +364,5 @@ To display the synthesized design we type ```show multiple_modules```. The follo
 
 ![image](https://github.com/AniruddhaN2203/pes_asic_class/assets/142299140/fbe9fab3-4cc4-4ab7-ac18-806a215b64b6)
 
+The above design is known as a **Heirarchical Design**. This is because in the usual designs synthesized we expect to see logic gates with connections but here we see the modules which were instantiated as logic gates. The modules themselves act like logic gates by deifinition but it is not displayed so.
+

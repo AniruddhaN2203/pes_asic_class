@@ -29,7 +29,7 @@
 ## RTL design using Verilog with SKY130 Technology - Day 2
   - [Programs used for the day]()
   - [Introduction to timing libs](#introduction-to-timing-libs)
-  - [Heirarchical vs Flat Synthesis](heirarchical-vs-flat-synthesis)
+  - [Heirarchical vs Flat Synthesis](#heirarchical-vs-flat-synthesis)
 
 # Day 1
 - First we look at the introduction to the RISC-V ISA(Instructiion Set Architecture). Supposing we need to execute a C program on a particular hardware. First the C-program is converted into Assembly Code( here for RISC-V processor). Then the assembly code is converted into binary. An RTL implements this code for the particular layout of the RISC-V processor and the output is visible.

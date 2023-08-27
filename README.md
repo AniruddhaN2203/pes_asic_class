@@ -401,6 +401,9 @@ When we flatten we directly see whole structure of the circuit. This is not the 
 **Sub Module Level Synthesis**
 
 - Here we will try to synthesize one of the sub modules of the complete design.
+
+![image](https://github.com/AniruddhaN2203/pes_asic_class/assets/142299140/3eb3650f-9407-4c5e-beb2-36ea4cb90b2a)
+
 - We invoke yosys with  the ```yosys``` command as usual.
 - Then we use the ```read_verilog``` command to read the same multiple_modules.v file.
 - ```synth -top sub_module1``` is used to synthesize the design of the first sub module(here the AND gate).
@@ -408,7 +411,9 @@ When we flatten we directly see whole structure of the circuit. This is not the 
 ![image](https://github.com/AniruddhaN2203/pes_asic_class/assets/142299140/5dc097aa-27e2-401e-95ea-9907dda0d7ec)
 
 - From the above statistics we can infer that only one AND gate exists.
+- We then use the ```abc -liberty ../my_lib//lib/sky130_fd_sc_hd__tt_025C_1v80.lib``` command to link the library to the synthesis.
+- Now typing the ```show``` command we can see the synthesized design.
 
-![image](https://github.com/AniruddhaN2203/pes_asic_class/assets/142299140/3eb3650f-9407-4c5e-beb2-36ea4cb90b2a)
+![image](https://github.com/AniruddhaN2203/pes_asic_class/assets/142299140/4bf475e3-4fcf-4717-8639-0cb6854ad38d)
 
-- We then use the ```abc -liberty ../my_lib//lib/sky130_fd_sc_hd__tt_025C_1v80.lib``` command to link the library to the synthesis
+We shall now see, why the synthesizing of sub modules is important. If we need to synthesize a very big design that the tool is not able to synthesize all at once effeciently, we can synthesize the parts one by one, gather the netlist files and then combine them together to get the final result. This can also be useful when debugging for problems. When we also have multiple instances of the same module it is helpful.

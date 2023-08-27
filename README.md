@@ -391,3 +391,9 @@ the hierarchies won't be preserved and we will get an even more concise program
 ![image](https://github.com/AniruddhaN2203/pes_asic_class/assets/142299140/1f371c9c-21b5-4940-909e-3471bb2b950f)
 
 We get direct instantiations of the AND gate and the OR gate.
+
+Now if we type the ```show``` command after the ```flatten``` command we see this:
+
+![image](https://github.com/AniruddhaN2203/pes_asic_class/assets/142299140/234af1f7-f79e-4a61-b492-bc40d3bd5b38)
+
+When we flatten we directly see whole structure of the circuit. This is not the case when we execute show with the previuos command. Previously the logic gates were shown as sub modules but here they are flattened out into the basic gates.

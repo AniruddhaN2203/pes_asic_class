@@ -29,7 +29,7 @@
 ## RTL design using Verilog with SKY130 Technology - Day 2
   - [Programs used for the day]()
   - [Introduction to timing libs](#introduction-to-timing-libs)
-  - [Heirarchical vs Flat Synthesis](#heirarchical-vs-flat-synthesis)
+  - [Hierarchical vs Flat Synthesis](#hierarchical-vs-flat-synthesis)
 
 # Day 1
 - First we look at the introduction to the RISC-V ISA(Instructiion Set Architecture). Supposing we need to execute a C program on a particular hardware. First the C-program is converted into Assembly Code( here for RISC-V processor). Then the assembly code is converted into binary. An RTL implements this code for the particular layout of the RISC-V processor and the output is visible.
@@ -324,7 +324,7 @@ Now let us look at what it has to offer.
 
 - Here the 0,2,4 indicates how wide the transistors are that are used in the following AND gates. Wider the transisistors, more the area and power consumed but also lesser the delay.
 
-## Heirarchical vs Flat Synthesis
+## Hierarchical vs Flat Synthesis
 The first file that we are going to use to analyze is
 
 ![image](https://github.com/AniruddhaN2203/pes_asic_class/assets/142299140/ac8480a1-a566-4791-9f95-56cb18264996)
@@ -364,5 +364,5 @@ To display the synthesized design we type ```show multiple_modules```. The follo
 
 ![image](https://github.com/AniruddhaN2203/pes_asic_class/assets/142299140/fbe9fab3-4cc4-4ab7-ac18-806a215b64b6)
 
-The above design is known as a **Heirarchical Design**. This is because in the usual designs synthesized we expect to see logic gates with connections but here we see the modules which were instantiated as logic gates. The modules themselves act like logic gates by deifinition but it is not displayed so.
+The above design is known as a **Hierarchical Design**. This is because in the usual designs synthesized we expect to see logic gates with connections but here we see the modules which were instantiated as logic gates. The modules themselves act like logic gates by deifinition but it is not displayed so.
 

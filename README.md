@@ -319,4 +319,9 @@ Now let us look at what it has to offer.
 
 - For the above defined cell we can see the corresponding verilog file
 
+![image](https://github.com/AniruddhaN2203/pes_asic_class/assets/142299140/45eed033-acae-4cda-91c9-53f56a4daed9) ![image](https://github.com/AniruddhaN2203/pes_asic_class/assets/142299140/c0129cfe-82f8-4d29-b078-5ea4f5b9d2ec) ![image](https://github.com/AniruddhaN2203/pes_asic_class/assets/142299140/e1e8cd23-575c-413d-a8fd-df1d74917591)
+
+- Here the 0,2,4 indicates how wide the transistors are that are used in the following AND gates. Wider the transisistors, more the area and power consumed but also lesser the delay.
+
+
 

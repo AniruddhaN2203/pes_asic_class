@@ -29,6 +29,7 @@
 ## RTL design using Verilog with SKY130 Technology - Day 2
   - [Programs used for the day]()
   - [Introduction to timing libs](#introduction-to-timing-libs)
+  - [Heirarchical vs Flat Synthesis](heirarchical-vs-flat-synthesis)
 
 # Day 1
 - First we look at the introduction to the RISC-V ISA(Instructiion Set Architecture). Supposing we need to execute a C program on a particular hardware. First the C-program is converted into Assembly Code( here for RISC-V processor). Then the assembly code is converted into binary. An RTL implements this code for the particular layout of the RISC-V processor and the output is visible.
@@ -323,5 +324,43 @@ Now let us look at what it has to offer.
 
 - Here the 0,2,4 indicates how wide the transistors are that are used in the following AND gates. Wider the transisistors, more the area and power consumed but also lesser the delay.
 
+## Heirarchical vs Flat Synthesis
+The first file that we are going to use to analyze is
 
+![image](https://github.com/AniruddhaN2203/pes_asic_class/assets/142299140/ac8480a1-a566-4791-9f95-56cb18264996)
+
+There are two submodules, one is an AND gate and the other is an OR gate. Let us how they are interconnected
+
+- Let us consider 3 inputs a, b and c.
+- Eq 1 -> A&B = Y1
+- Eq 2 -> Y1 | C = Y
+- Y is the final output.
+
+Let us now synthesize this design. For this we open yosys using the command ```yosys```.
+
+![image](https://github.com/AniruddhaN2203/pes_asic_class/assets/142299140/5f8ae27b-4244-45b6-bf50-b142d46a545a)
+
+- Now we type the command
+```
+synth -top multiple_modules
+```
+to synthesize the design.
+
+- On successful synthesizing the following should display
+
+![image](https://github.com/AniruddhaN2203/pes_asic_class/assets/142299140/a24ddcb9-ed4e-49f2-9158-2ba32be872d6)
+
+- We then type the command
+```
+abc -liberty ../my_lib//lib/sky130_fd_sc_hd__tt_025C_1v80.lib
+```
+to link the design to the respective library file.
+
+The following should display on linking
+
+![image](https://github.com/AniruddhaN2203/pes_asic_class/assets/142299140/49e6c458-1457-4ace-b476-78709b4c6911)
+
+To display the synthesized design we type ```show multiple_modules```. The following figure is displayed.
+
+![image](https://github.com/AniruddhaN2203/pes_asic_class/assets/142299140/fbe9fab3-4cc4-4ab7-ac18-806a215b64b6)
 

@@ -366,3 +366,11 @@ To display the synthesized design we type ```show multiple_modules```. The follo
 
 The above design is known as a **Hierarchical Design**. This is because in the usual designs synthesized we expect to see logic gates with connections but here we see the modules which were instantiated as logic gates. The modules themselves act like logic gates by deifinition but it is not displayed so.
 
+Now we can take a look at the netlist file by using the following commands
+```
+write_verilog -noattr multiple_modules_hier.v
+```
+This will give us the netlist file in a more readable format. We can now open this file and check its contents
+
+![image](https://github.com/AniruddhaN2203/pes_asic_class/assets/142299140/ba7c9864-4880-4bff-bbe8-14a0e77b00cf)
+

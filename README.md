@@ -374,5 +374,5 @@ This will give us the netlist file in a more readable format. We can now open th
 
 ![image](https://github.com/AniruddhaN2203/pes_asic_class/assets/142299140/ba7c9864-4880-4bff-bbe8-14a0e77b00cf)
 
-The [program]()
+The [program](https://github.com/AniruddhaN2203/pes_asic_class/blob/main/Iverilog%20DAY_2/multiple_modules_hier.v) opened from the above command has and AND gate and an OR gate, which have two inpits each respectively.
 

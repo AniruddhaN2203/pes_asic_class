@@ -27,6 +27,8 @@
   - [Introduction to Yosys and Logic Synthesis](#introduction-to-yosys-and-logic-synthesis)
 
 ## RTL design using Verilog with SKY130 Technology - Day 2
+  - [Programs used for the day]()
+  - [Introduction to timing libs](#introduction-to-timing-libs)
 
 # Day 1
 - First we look at the introduction to the RISC-V ISA(Instructiion Set Architecture). Supposing we need to execute a C program on a particular hardware. First the C-program is converted into Assembly Code( here for RISC-V processor). Then the assembly code is converted into binary. An RTL implements this code for the particular layout of the RISC-V processor and the output is visible.
@@ -284,3 +286,32 @@ write_verilog -noaatr good_mux_netlist.v
 - i0 and i1 are our primary inputs, sel is our select line and y is our output.
 
 # RTL design using Verilog with SKY130 Technology - Day 2
+## Introduction to Timing Libs
+
+First let us see what is inside the .lib file. We can open it in the following way
+
+![image](https://github.com/AniruddhaN2203/pes_asic_class/assets/142299140/37d5d45b-8d14-4d45-95e1-1ea630bcd1b7)
+
+Now let us look at what it has to offer.
+
+![image](https://github.com/AniruddhaN2203/pes_asic_class/assets/142299140/3d17ecc4-ed65-44bc-98e4-499e5e8819a4)
+
+- In the first line we can see the name sky130, which means this is the 130nm library
+- "tt" means typical. There can be slow, fast and typical libraries
+- 025C is the temperature.
+- 1v8 is the voltage.
+- When we look into a library the phrase PVT should be taken into account.
+  - P is process.
+  - V is voltage.
+  - T is temperature.
+- The main reason we look into these three parameters is because the circuit has to work under variations across all of them.
+- Line 12 tells us that the technology used is the CMOS technology
+- From lines 15 to 20 we can see the units used for each of the parameters, for example time is defined in nano seconds(ns).
+
+![image](https://github.com/AniruddhaN2203/pes_asic_class/assets/142299140/6c482461-23e3-46d9-adcf-f2b2b6e30315)
+
+- A keyword that is used pretty often in the library file is the "cell" keyword.
+- There a quite a lot of logic gates defined and also variations of the same type of logic gates.
+- 
+
+

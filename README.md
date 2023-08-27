@@ -397,3 +397,18 @@ Now if we type the ```show``` command after the ```flatten``` command we see thi
 ![image](https://github.com/AniruddhaN2203/pes_asic_class/assets/142299140/234af1f7-f79e-4a61-b492-bc40d3bd5b38)
 
 When we flatten we directly see whole structure of the circuit. This is not the case when we execute show with the previuos command. Previously the logic gates were shown as sub modules but here they are flattened out into the basic gates.
+
+**Sub Module Level Synthesis**
+
+- Here we will try to synthesize one of the sub modules of the complete design.
+- We invoke yosys with  the ```yosys``` command as usual.
+- Then we use the ```read_verilog``` command to read the same multiple_modules.v file.
+- ```synth -top sub_module1``` is used to synthesize the design of the first sub module(here the AND gate).
+
+![image](https://github.com/AniruddhaN2203/pes_asic_class/assets/142299140/5dc097aa-27e2-401e-95ea-9907dda0d7ec)
+
+- From the above statistics we can infer that only one AND gate exists.
+
+![image](https://github.com/AniruddhaN2203/pes_asic_class/assets/142299140/3eb3650f-9407-4c5e-beb2-36ea4cb90b2a)
+
+- We then use the ```abc -liberty ../my_lib//lib/sky130_fd_sc_hd__tt_025C_1v80.lib``` command to link the library to the synthesis

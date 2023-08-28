@@ -526,4 +526,14 @@ abc -liberty ../my_lib//lib/sky130_fd_sc_hd__tt_025C_1v80.lib
 
 ![image](https://github.com/AniruddhaN2203/pes_asic_class/assets/142299140/b2a8f2c7-57b7-4449-8f22-6646b9e48c83)
 
-The flop was written with an active high reset but the model is an active low here, so hence the inverter to convert it into the desired design
+The flop was written with an active high reset but the model is an active low here, so hence the inverter to convert it into the desired design.
+
+To synthesize the design for a set Flip Flop we follow the same steps above for the file
+```
+dff_async_set.v
+```
+We get the following design.
+
+![image](https://github.com/AniruddhaN2203/pes_asic_class/assets/142299140/e68ed82f-f660-45f3-b9de-42ebef78bf00)
+
+Here also an inverter is added to make the existing active low model, active high according to our needs

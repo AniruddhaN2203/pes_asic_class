@@ -466,6 +466,7 @@ Now we get a vcd file that we must use to open the waveform with the command
 ```
 gtkwave tb_dff_asyncres.vcd 
 ```
+![image](https://github.com/AniruddhaN2203/pes_asic_class/assets/142299140/6a53fad3-3285-4741-9d54-59725b947a47)
 
 Now if we set all the inputs and zoom in on a part for easier verification, we can see the following
 

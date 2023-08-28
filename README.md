@@ -27,7 +27,7 @@
   - [Introduction to Yosys and Logic Synthesis](#introduction-to-yosys-and-logic-synthesis)
 
 ## RTL design using Verilog with SKY130 Technology - Day 2
-  - [Programs used for the day]()
+  - [Programs used for the day](https://github.com/AniruddhaN2203/pes_asic_class/tree/main/Iverilog%20DAY_2)
   - [Introduction to timing libs](#introduction-to-timing-libs)
   - [Hierarchical vs Flat Synthesis](#hierarchical-vs-flat-synthesis)
 

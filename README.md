@@ -438,4 +438,8 @@ For looking into flops further we access all our programs from the same director
   - There is another else condition that states that the output should be 'd' if there is a positive edge on clk and not on the asynchronous reset.
 
 ![image](https://github.com/AniruddhaN2203/pes_asic_class/assets/142299140/2bdb83e6-fcd0-445c-acc7-222c534f8605)
-- f
+- The above program is that of an Asynchrous D Flip Flop.
+  - When there is positive edge on the async_set the output value is set to 1 and this can happen whenever during the operation of the circuit.
+  - There is another else condition that states that the output should be 'd' if there is a positive edge on clk and not on the asynchronous set.
+
+

@@ -428,6 +428,7 @@ We shall now see, why the synthesizing of sub modules is important. If we need t
 - Flops help prevent glitches by providing a control and synchronization for holding and propagating changes in signals in the circuit.
 
 **Different Types of Flops**
+
 For looking into flops further we access all our programs from the same directory as before
 
 ![image](https://github.com/AniruddhaN2203/pes_asic_class/assets/142299140/b4ce7aca-56de-4600-aa41-3c50156834e7)

@@ -478,3 +478,20 @@ We perform the same Iverilog operations in the Asynchronous D Flip Flop with an 
 
 Here we can see that regardless of d becoming 0, as long as the async_set is 1 even the output is retained at 1.
 
+
+Let us now look at the waveform of the Synchronous reset. We first type the command
+```
+iverilog dff_syncres.v tb_dff_syncres.v
+```
+Next we type ```./a.out```.
+
+Now we get a vcd file that we must use to open the waveform with the command
+```
+gtkwave tb_dff_syncres.vcd
+```
+Looking at the waveform
+
+![image](https://github.com/AniruddhaN2203/pes_asic_class/assets/142299140/21e6e9e6-cc6c-4b9d-aff8-11f1b77f820c)
+
+We can see that although sync_reset goes high, the output remains the same until there is a posedge on the clock. At the posedge the condition as to whether sync_reset is high or not and hence the output notices a change.
+

@@ -430,9 +430,9 @@ We shall now see, why the synthesizing of sub modules is important. If we need t
 **Different Types of Flops**
 For looking into flops further we access all our programs from the same directory as before
 
-![image](https://github.com/AniruddhaN2203/pes_asic_class/assets/142299140/10d8a1a0-2cbb-4329-89a2-e3ecc8134942)
+![image](https://github.com/AniruddhaN2203/pes_asic_class/assets/142299140/b4ce7aca-56de-4600-aa41-3c50156834e7)
 
-![Screenshot from 2023-08-29 00-17-50](https://github.com/AniruddhaN2203/pes_asic_class/assets/142299140/59842e97-b069-4f96-8aa9-99c744c07dae)
+![image](https://github.com/AniruddhaN2203/pes_asic_class/assets/142299140/7069fea4-aa62-4ee4-9cb6-9bada5581bdb)
 
 - The above program is that of an Asynchrous D Flip Flop.
   - When there is positive edge on the async_reset the output value is set to 0 and this can happen whenever during the operation of the circuit.

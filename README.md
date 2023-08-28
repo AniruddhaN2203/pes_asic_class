@@ -451,3 +451,23 @@ For looking into flops further we access all our programs from the same director
   - If there is also a postive edge on the async_reset, then this is an asynchronous reset operation.
   - If this is not the case and the always block is entered only on posedge of the clock, then the value of sync_reset will determine whether to reset the flop synchronously or not.
   - Otherwise the output just gets the value 'd'.
+ 
+**Flop Synthesis Simulation**
+First we will now see the waveform of the Asynchronous D Flip Flop using Iverilog and gtkwave.
+
+To start this process we first type the command
+```
+iverilog dff_asyncres.v tb_dff_asyncres.v
+```
+Next we type ```./a.out```.
+
+Now we get a vcd file that we must use to open the waveform with the command
+```
+gtkwave tb_dff_asyncres.vcd 
+```
+
+Now if we set all the inputs and zoom in on a part for easier verification, we can see the following
+
+![image](https://github.com/AniruddhaN2203/pes_asic_class/assets/142299140/44c5d03f-70b8-48a3-a550-e91f5e0d754c)
+
+Here we can clearly notice that when the clock is postive and asynch_reset is high, it sets the output to 0 regardless of the value of 'd' at that moment

@@ -497,3 +497,33 @@ Looking at the waveform
 
 We can see that although sync_reset goes high, the output remains the same until there is a posedge on the clock. At the posedge the condition as to whether sync_reset is high or not and hence the output notices a change.
 
+**Synthesizing the Modules**
+
+![image](https://github.com/AniruddhaN2203/pes_asic_class/assets/142299140/ce357e00-fe7a-4787-9867-4d8e237c0362)
+
+- We open yosys using the command ```yosys```.
+- Let us read the verilog file with
+```
+read_verilog dff_asyncres.v
+```
+- Now for the initial synthesis command we type
+```
+synth -top dff_asyncres
+```
+- Since we are using D Flip Flops, we are supposed to use a keyword here dfflibmap.
+```
+dfflibmap -liberty ../my_lib/lib/sky130_fd_sc_hd__tt_025C_1v80.lib
+```
+This is end message it must display.
+
+![image](https://github.com/AniruddhaN2203/pes_asic_class/assets/142299140/c81c2158-3b1a-4b04-9e90-95cc332b05dd)
+
+Now we link the library file to the design as usual with 
+```
+abc -liberty ../my_lib//lib/sky130_fd_sc_hd__tt_025C_1v80.lib
+```
+- Now typing ```show``` should display the design.
+
+![image](https://github.com/AniruddhaN2203/pes_asic_class/assets/142299140/b2a8f2c7-57b7-4449-8f22-6646b9e48c83)
+
+The flop was written with an active high reset but the model is an active low here, so hence the inverter to convert it into the desired design

@@ -30,6 +30,7 @@
   - [Programs used for the day](https://github.com/AniruddhaN2203/pes_asic_class/tree/main/Iverilog%20DAY_2)
   - [Introduction to timing libs](#introduction-to-timing-libs)
   - [Hierarchical vs Flat Synthesis](#hierarchical-vs-flat-synthesis)
+  - [Various Flop Coding Styles and Optimization](#various-flop-coding-styles-and-optimization)
 
 # Day 1
 - First we look at the introduction to the RISC-V ISA(Instructiion Set Architecture). Supposing we need to execute a C program on a particular hardware. First the C-program is converted into Assembly Code( here for RISC-V processor). Then the assembly code is converted into binary. An RTL implements this code for the particular layout of the RISC-V processor and the output is visible.
@@ -417,3 +418,11 @@ When we flatten we directly see whole structure of the circuit. This is not the 
 ![image](https://github.com/AniruddhaN2203/pes_asic_class/assets/142299140/4bf475e3-4fcf-4717-8639-0cb6854ad38d)
 
 We shall now see, why the synthesizing of sub modules is important. If we need to synthesize a very big design that the tool is not able to synthesize all at once effeciently, we can synthesize the parts one by one, gather the netlist files and then combine them together to get the final result. This can also be useful when debugging for problems. When we also have multiple instances of the same module it is helpful.
+
+
+## Various Flop Coding Styles and Optimization
+
+**Why do we need Flops?**
+- Flops are fundamental parts of digital circuits that help in preventing glitches and thereby endure smooth operation of the circuit.
+- Glitches are basically temporary changes in a digital signal that are unwanted. They can lead to incorrect behaviour and malfunction of the circuit.
+- Flops help prevent glitches by providing a control and synchronization for holding and propagating changes in signals in the circuit.

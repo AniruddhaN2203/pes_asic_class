@@ -426,3 +426,16 @@ We shall now see, why the synthesizing of sub modules is important. If we need t
 - Flops are fundamental parts of digital circuits that help in preventing glitches and thereby endure smooth operation of the circuit.
 - Glitches are basically temporary changes in a digital signal that are unwanted. They can lead to incorrect behaviour and malfunction of the circuit.
 - Flops help prevent glitches by providing a control and synchronization for holding and propagating changes in signals in the circuit.
+
+**Different Types of Flops**
+For looking into flops further we access all our programs from the same directory as before
+
+![image](https://github.com/AniruddhaN2203/pes_asic_class/assets/142299140/10d8a1a0-2cbb-4329-89a2-e3ecc8134942)
+
+![Screenshot from 2023-08-29 00-17-50](https://github.com/AniruddhaN2203/pes_asic_class/assets/142299140/59842e97-b069-4f96-8aa9-99c744c07dae)
+
+- The above program is that of an Asynchrous D Flip Flop.
+  - When there is positive edge on the async_reset the output value is set to 0 and this can happen whenever during the operation of the circuit.
+  - There is another else condition that states that the output should be 'd' if there is a positive edge on clk and not on the asynchronous reset.
+
+

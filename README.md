@@ -442,4 +442,12 @@ For looking into flops further we access all our programs from the same director
   - When there is positive edge on the async_set the output value is set to 1 and this can happen whenever during the operation of the circuit.
   - There is another else condition that states that the output should be 'd' if there is a positive edge on clk and not on the asynchronous set.
 
+![image](https://github.com/AniruddhaN2203/pes_asic_class/assets/142299140/f997665d-ff1a-4bc2-9792-367ab48ebc68)
+- In this case the reset will not activate unless there is a positive edge of the clock. Here the reset is not mentioned in the sensitivity list and hence it does not hold authority to enter the always block on its own.
 
+![image](https://github.com/AniruddhaN2203/pes_asic_class/assets/142299140/a74dd581-744c-404f-8e73-62534b4ce142)
+- The above is an example of a case with both asynchronous and synchronous reset.
+  - We always enter into the always block if there is a positive edge on the clock.
+  - If there is also a postive edge on the async_reset, then this is an asynchronous reset operation.
+  - If this is not the case and the always block is entered only on posedge of the clock, then the value of sync_reset will determine whether to reset the flop synchronously or not.
+  - Otherwise the output just gets the value 'd'.

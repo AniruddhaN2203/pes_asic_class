@@ -471,3 +471,10 @@ Now if we set all the inputs and zoom in on a part for easier verification, we c
 ![image](https://github.com/AniruddhaN2203/pes_asic_class/assets/142299140/44c5d03f-70b8-48a3-a550-e91f5e0d754c)
 
 Here we can clearly notice that when the clock is postive and asynch_reset is high, it sets the output to 0 regardless of the value of 'd' at that moment
+
+We perform the same Iverilog operations in the Asynchronous D Flip Flop with an asynchronous set value and obtain the following waveform
+
+![image](https://github.com/AniruddhaN2203/pes_asic_class/assets/142299140/3c538c16-0f16-4dd2-885b-f7a00abe617c)
+
+Here we can see that regardless of d becoming 0, as long as the async_set is 1 even the output is retained at 1.
+

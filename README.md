@@ -569,5 +569,33 @@ The results are displayed and then we use ```show``` to display the design.
 
 ![image](https://github.com/AniruddhaN2203/pes_asic_class/assets/142299140/f8e2f4ae-5998-4df8-821d-8421c40f157e)mul_2
 
+- The first program that we will be working with is a program that takes a 3 bit input and gives a 4 bit output.
+- If we do the math for an example lets say 3 * 2 = 6.
+- 3 in binary is 011(3 bits)
+- 6 in binary is 0110(4 bits)
+- As we can see a zero is appended to the previous binary number.
+- Let us look at what design it synthesizes.
+
+- We start yosys with ```yosys```.
+
+![image](https://github.com/AniruddhaN2203/pes_asic_class/assets/142299140/409fbfa7-c1e0-48b4-bb29-41ce5e85989d)
+
+- We use the same commands as before to read the file mult_2.v and then we synthesize it with the command ```synth -top mul2```.
+
+![image](https://github.com/AniruddhaN2203/pes_asic_class/assets/142299140/17d0ddf8-a95e-4fac-a470-04373aec8ea1)
+
+- As we can see from the above results no hardware is generated
+
+![image](https://github.com/AniruddhaN2203/pes_asic_class/assets/142299140/130f3928-4af5-4d7b-9a19-fc307013fd7d)
+
+The linking command also doesn't work as there is nothing to link the cells to.
+
+![image](https://github.com/AniruddhaN2203/pes_asic_class/assets/142299140/2d84b508-d998-420c-9c06-92205c73215a)
+
+Here in the design we can see that a 0 is appended to 'a'. This is seen below [2:0 - 3:1] and we get the desired output.
+
+
+
+
 ![image](https://github.com/AniruddhaN2203/pes_asic_class/assets/142299140/2dfb8e52-5103-4f3e-9838-d7d7874ff046)mul_8
 

@@ -31,6 +31,7 @@
   - [Introduction to timing libs](#introduction-to-timing-libs)
   - [Hierarchical vs Flat Synthesis](#hierarchical-vs-flat-synthesis)
   - [Various Flop Coding Styles and Optimization](#various-flop-coding-styles-and-optimization)
+  - [Interesting Optimizations](#interesting-optimizations)
 
 # Day 1
 - First we look at the introduction to the RISC-V ISA(Instructiion Set Architecture). Supposing we need to execute a C program on a particular hardware. First the C-program is converted into Assembly Code( here for RISC-V processor). Then the assembly code is converted into binary. An RTL implements this code for the particular layout of the RISC-V processor and the output is visible.
@@ -563,4 +564,7 @@ The results are displayed and then we use ```show``` to display the design.
 - As we can see the D Flop on the right has no set or reset pin.
 - We also have an inverted input A_N.
 - Expression of the equation before the Flop is (sync_reset)'.d.
-- Hence we have got an appropriate design
+
+## Interesting Optimizations
+
+![image](https://github.com/AniruddhaN2203/pes_asic_class/assets/142299140/f8e2f4ae-5998-4df8-821d-8421c40f157e)

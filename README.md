@@ -537,3 +537,30 @@ We get the following design.
 ![image](https://github.com/AniruddhaN2203/pes_asic_class/assets/142299140/e68ed82f-f660-45f3-b9de-42ebef78bf00)
 
 Here also an inverter is added to make the existing active low model, active high according to our needs
+
+I---------------------------------------------------------------------------------------------------------------------------------------I
+
+Now we synthesize the D Flip Flop with Synchronous reset.
+
+![image](https://github.com/AniruddhaN2203/pes_asic_class/assets/142299140/68999183-714d-4443-951a-9c92eff40b59)
+
+We use the same commands as mentioned above to read the verilog and synthesize the design.
+
+![image](https://github.com/AniruddhaN2203/pes_asic_class/assets/142299140/729533b9-0d5e-4edc-9640-fd1be061c437)
+
+We use dfflibmap as this is Flip Flop.
+
+![image](https://github.com/AniruddhaN2203/pes_asic_class/assets/142299140/d29b0e63-7ba0-4c7d-b5af-7ed507ed1a85)
+
+This is what should display after the execution of the dfflibmap command and then we should link the library file as usual.
+
+![image](https://github.com/AniruddhaN2203/pes_asic_class/assets/142299140/70e5f636-f5b8-4f31-82a2-bc0c04e958a6)
+
+The results are displayed and then we use ```show``` to display the design.
+
+![image](https://github.com/AniruddhaN2203/pes_asic_class/assets/142299140/f5463f03-8b72-4aed-a6ed-effbbde56d58)
+
+- As we can see the D Flop on the right has no set or reset pin.
+- We also have an inverted input A_N.
+- Expression of the equation before the Flop is (sync_reset)'.d.
+- Hence we have got an appropriate design

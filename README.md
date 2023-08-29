@@ -33,6 +33,8 @@
   - [Various Flop Coding Styles and Optimization](#various-flop-coding-styles-and-optimization)
   - [Interesting Optimizations](#interesting-optimizations)
 
+## # RTL design using Verilog with SKY130 Technology - Day 3
+
 # Day 1
 - First we look at the introduction to the RISC-V ISA(Instructiion Set Architecture). Supposing we need to execute a C program on a particular hardware. First the C-program is converted into Assembly Code( here for RISC-V processor). Then the assembly code is converted into binary. An RTL implements this code for the particular layout of the RISC-V processor and the output is visible.
 - An application running on a system is usually written with the help of a high level language such as C,C++,Python etc. The code of these applications are compiled with the help of compilers running on a system software(OS). The compiler converts the high level code into assembly intructions for the particular processor. The assembler then converts the instructions into binary which is fed into the layout of the chip that processes every pattern of bits and the program is hence run.
@@ -633,3 +635,5 @@ write_verilog -noattr mult8_net.v
 ![image](https://github.com/AniruddhaN2203/pes_asic_class/assets/142299140/8e0d6e78-47dc-4c91-8f7d-215be177c18f)
 
 As we can see y is a concatenation of 'aa'.
+
+# RTL design using Verilog with SKY130 Technology - Day 3

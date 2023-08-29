@@ -567,4 +567,7 @@ The results are displayed and then we use ```show``` to display the design.
 
 ## Interesting Optimizations
 
-![image](https://github.com/AniruddhaN2203/pes_asic_class/assets/142299140/f8e2f4ae-5998-4df8-821d-8421c40f157e)
+![image](https://github.com/AniruddhaN2203/pes_asic_class/assets/142299140/f8e2f4ae-5998-4df8-821d-8421c40f157e)mul_2
+
+![image](https://github.com/AniruddhaN2203/pes_asic_class/assets/142299140/2dfb8e52-5103-4f3e-9838-d7d7874ff046)mul_8
+

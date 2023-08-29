@@ -594,8 +594,42 @@ The linking command also doesn't work as there is nothing to link the cells to.
 
 Here in the design we can see that a 0 is appended to 'a'. This is seen below [2:0 - 3:1] and we get the desired output.
 
+To get the netlist file we type
+```
+write_verilog -noattr mul2_net.v
+```
+![image](https://github.com/AniruddhaN2203/pes_asic_class/assets/142299140/9e98814d-d5d6-4763-8053-6ebf72613137)
 
+As we can see, a 0 is appended to 'a'.
 
+I----------------------------------------------------------------------------------------------------------------I
 
 ![image](https://github.com/AniruddhaN2203/pes_asic_class/assets/142299140/2dfb8e52-5103-4f3e-9838-d7d7874ff046)
 
+- The second program that we will be working on is the above.
+- Here a is a 3 bit input and y is a 6 bit output.
+- The relationship between a and y is that "a*9 = y".
+- This we can spilt as "(a*8) + (a*1) = y".
+- a*8 will give is a000.
+- In the place of these 3 zeroes we get 'a' on adddition.
+- Thus the output is aa.
+
+  ![image](https://github.com/AniruddhaN2203/pes_asic_class/assets/142299140/d97fc1ec-25eb-48de-a36d-6e6ada69ce61)
+
+- We read the file and synthesize as usual.
+
+![image](https://github.com/AniruddhaN2203/pes_asic_class/assets/142299140/ed1430ac-46e8-4377-9093-7e6334f4e9a7)
+
+- We can see that no hardware is synthesizzed and hence the abc command rejects the linking of cells
+- We type ```show``` to display the figure.
+
+![image](https://github.com/AniruddhaN2203/pes_asic_class/assets/142299140/daf97bd5-2537-40ee-8bcc-7498f93a3871)
+
+- 2*2:0 - 5:0 is exactly the same as displaying 'aa'. Hence the output is verified.
+- We look at the netlist file below
+```
+write_verilog -noattr mult8_net.v
+```
+![image](https://github.com/AniruddhaN2203/pes_asic_class/assets/142299140/8e0d6e78-47dc-4c91-8f7d-215be177c18f)
+
+As we can see y is a concatenation of 'aa'.

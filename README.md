@@ -719,3 +719,35 @@ abc -liberty ../my_lib//lib/sky130_fd_sc_hd__tt_025C_1v80.lib
 
 ![image](https://github.com/AniruddhaN2203/pes_asic_class/assets/142299140/a63f07a0-7b18-46b4-9c7a-0048325eef00)
 - The above design complies with the equation and an OR gate is generated.
+
+I--------------------------------------------------------------------------------------------------------------------I
+
+The third program is as follows:
+
+![Screenshot from 2023-09-01 00-54-53](https://github.com/AniruddhaN2203/pes_asic_class/assets/142299140/70bc7ef0-d475-4ac9-8475-a716ba09319c)
+
+- The above program has two 2:1 MUX, the output of the first one is connected as one of the inputs of the second MUX.
+- When 'a = 1', 'c?b:0' is chosen.
+  - When 'c = 1', 'b' is chosen, else 0 is chosen.
+- When 'a = 0', 0 is chosen.
+- Final equation is simplified to: y = a'.0 + a.(c'.0 + c.b) = a.b.c
+
+Let us synthesize this design
+
+![image](https://github.com/AniruddhaN2203/pes_asic_class/assets/142299140/57488a84-92bc-4f26-b9b1-b9b9e74903b9)
+- Use the same commands as mentioned above.
+
+![image](https://github.com/AniruddhaN2203/pes_asic_class/assets/142299140/b91a609c-31c4-499e-a201-e53ad93bef03)
+- The above results should be displayed.
+- Then we use the command ```opt_clean - purge``` to initiate constant propagation.
+- We link the library file to the design.
+- Then we type ```show``` to display.
+
+![image](https://github.com/AniruddhaN2203/pes_asic_class/assets/142299140/addb062a-fc3c-40c2-a057-90216307af07)
+- The above design complies with the equation and a 3 input AND gate is generated.
+
+I--------------------------------------------------------------------------------------------------------------------I
+
+The fourth program is as follows:
+
+ 

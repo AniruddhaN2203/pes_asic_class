@@ -739,7 +739,7 @@ Let us synthesize this design
 
 ![image](https://github.com/AniruddhaN2203/pes_asic_class/assets/142299140/b91a609c-31c4-499e-a201-e53ad93bef03)
 - The above results should be displayed.
-- Then we use the command ```opt_clean - purge``` to initiate constant propagation.
+- Then we use the command ```opt_clean -purge``` to initiate constant propagation.
 - We link the library file to the design.
 - Then we type ```show``` to display.
 
@@ -750,4 +750,28 @@ I-------------------------------------------------------------------------------
 
 The fourth program is as follows:
 
+![image](https://github.com/AniruddhaN2203/pes_asic_class/assets/142299140/1b12cfd8-7490-4b4b-944c-b65bcd28c56f)
+
+The working for the above program is done by me in the below picture.
+
+![image](https://github.com/AniruddhaN2203/pes_asic_class/assets/142299140/d51905e1-0d1b-491b-a7cc-718bc7ca5349)working
+
+- As we can see the final equation is independent of 'b' and is only dependent on 'a' and 'c'.
+- The final expression for y2 is that of an XNOR gate.
+
+Let us synthesize this design
+
+![image](https://github.com/AniruddhaN2203/pes_asic_class/assets/142299140/f9d084ba-a3a6-4421-9777-98161dafe320)
+- Use the same commands mentioned above as for the previous programs.
+
+![image](https://github.com/AniruddhaN2203/pes_asic_class/assets/142299140/d07d2daa-2185-4da4-9922-dd15e9d439d2)
+- The above results should be displayed.
+- Then we use the command ```opt_clean -purge``` to initiate constant propagation.
+- We link the library file to the design.
+- Then we type ```show``` to display.
+
+![image](https://github.com/AniruddhaN2203/pes_asic_class/assets/142299140/484b9d9d-b44d-4466-8483-d96874f32512)
+- As we can see the above figure complies with the fact that the final equation is independent of 'b' and has generated an XNOR gate with 'a' and 'c' as the inputs.
+
+I-------------------------------------------------------------------------------------------------------------------I
  

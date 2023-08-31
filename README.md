@@ -699,4 +699,19 @@ The second program is as follows:
 - The above programs is a 2:1 MUX.
 - When 'a = 1' 'y = 1'; when 'a = 0' ' y = b'.
 - The equation is as follows: y = a + a'.b = a + b.
-- **This is the Absorption Law**
+- **This is the Absorption Law.**
+
+Let us synthesize this design
+
+![image](https://github.com/AniruddhaN2203/pes_asic_class/assets/142299140/a444b389-c362-41ce-bc3e-664292e838db)
+- First we read the verilog file: ```read_verilog opt_check2.v```.
+- Then we synthesize the design: ```synth -top opt_check2```
+
+![image](https://github.com/AniruddhaN2203/pes_asic_class/assets/142299140/6abc75d6-6c91-4651-83e0-350055566da7)
+
+- The above figure confirms that there is an OR gate cell that is generated.
+- Next we type ```opt_clean -purge``` for constant propagation and removing unused cells. This optimizes the design.
+- Then we type ```show```.
+
+![image](https://github.com/AniruddhaN2203/pes_asic_class/assets/142299140/a63f07a0-7b18-46b4-9c7a-0048325eef00)
+- The above design complies with the equation and an OR gate is generated.

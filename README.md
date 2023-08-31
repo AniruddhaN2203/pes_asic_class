@@ -1,4 +1,4 @@
-# pes_asic_class
+![image](https://github.com/AniruddhaN2203/pes_asic_class/assets/142299140/59656104-8e32-46bb-8b05-8dc9a30909da)# pes_asic_class
 
 
 
@@ -652,10 +652,37 @@ Now let us look at some programs here. First we perform the following steps as u
 
 ![image](https://github.com/AniruddhaN2203/pes_asic_class/assets/142299140/d67f51d4-8e3d-4838-9472-1c9dc5efe2ed)
 
-Our first program is this
+Our first program is as follows:
+
 ![image](https://github.com/AniruddhaN2203/pes_asic_class/assets/142299140/1cc8a24f-b3f7-48f1-811d-b2f57a15de2a)
 
 - The above programs is a 2:1 MUX.
 - When 'a = 1' 'y = b'; when 'a = 0' ' y = 0'.
-- The equation is as follows: y = a.b + a'.0 = ab. 
+- The equation is as follows: y = a.b + a'.0 = ab.
 
+Now we synthesize this design.
+
+![image](https://github.com/AniruddhaN2203/pes_asic_class/assets/142299140/50c02d6c-7578-4c91-bdf5-54d48666d61c)
+- We invoke yosys with the ```yosys``` command.
+- we import the cells from the library file using
+```
+read_liberty -lib ../my_lib/lib/sky130_fd_sc_hd__tt_025C_1v80.lib
+```
+- Then we read the file using the command ```read_verilog opt_check.v```.
+- Next we synthesize the design using ```synth - top opt_check```.
+
+![image](https://github.com/AniruddhaN2203/pes_asic_class/assets/142299140/20693ed6-4a6d-4c9b-8e2a-ec92f27bfafe)
+
+- The following should be displayed on execution.
+- Now we need to type a command to do the constant propagation process. This removes all unused cells and optimizes the design
+
+I--------------------------------------------------------------------------------------------------------------------I
+
+The second program is as follows:
+
+![image](https://github.com/AniruddhaN2203/pes_asic_class/assets/142299140/4864ee17-50e3-4f0c-832d-1bdbd969feb4)
+
+- The above programs is a 2:1 MUX.
+- When 'a = 1' 'y = 1'; when 'a = 0' ' y = b'.
+- The equation is as follows: y = a + a'.b = a + b.
+- **This is the Absorption Law**

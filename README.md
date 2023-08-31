@@ -35,7 +35,7 @@
 
 ## RTL design using Verilog with SKY130 Technology - Day 3
   - [Programs used for the day](https://github.com/AniruddhaN2203/pes_asic_class/tree/main/Iverilog%20DAY_3)
-  - [Introductiion to Optimizations](#introduction-to-optimizations)
+  - [Introduction to Optimizations](#introduction-to-optimizations)
   - [Combinational Logic Optimizations](#combinational-logic-optimizations)
 
 # Day 1
@@ -640,14 +640,14 @@ write_verilog -noattr mult8_net.v
 As we can see y is a concatenation of 'aa'.
 
 # RTL design using Verilog with SKY130 Technology - Day 3
-## Introductiion to Optimizations
+## Introduction to Optimizations
 
 **Constant Propagation and Boolean Logic Optimization**
 - Constant propagation occurs when a value that is a 0 or 1 propagates down the path of a circuit to give us an effecient version of the existing circuit through which it is propogating.
 - Boolean logic optimization is done by synthesis tools to get a very optimized logic that can be implemented effeciently and easily. For example the equation "assign y = a?(b?c:(c?a:0)):(!c)" reduces to something as simple as "y = a&c".
 - Constant propogation occurs in sequential logic circuits also; but only if the immediate output of the logic circuit is a constant value. Then it can be optimized.
 
-## Combinational Logic Optimization
+## Combinational Logic Optimizations
 Now let us look at some programs here. First we perform the following steps as usual and get into the required directory
 
 ![image](https://github.com/AniruddhaN2203/pes_asic_class/assets/142299140/d67f51d4-8e3d-4838-9472-1c9dc5efe2ed)

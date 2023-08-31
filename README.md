@@ -711,6 +711,10 @@ Let us synthesize this design
 
 - The above figure confirms that there is an OR gate cell that is generated.
 - Next we type ```opt_clean -purge``` for constant propagation and removing unused cells. This optimizes the design.
+- To link the library files to the design we type
+```
+abc -liberty ../my_lib//lib/sky130_fd_sc_hd__tt_025C_1v80.lib
+```
 - Then we type ```show```.
 
 ![image](https://github.com/AniruddhaN2203/pes_asic_class/assets/142299140/a63f07a0-7b18-46b4-9c7a-0048325eef00)

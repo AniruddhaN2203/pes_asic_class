@@ -33,7 +33,10 @@
   - [Various Flop Coding Styles and Optimization](#various-flop-coding-styles-and-optimization)
   - [Interesting Optimizations](#interesting-optimizations)
 
-## # RTL design using Verilog with SKY130 Technology - Day 3
+## RTL design using Verilog with SKY130 Technology - Day 3
+  - [Programs used for the day]()
+  - [Introductiion to Optimizations](#introduction-to-optimizations)
+  - [Combinational Logic Optimizations](#combinational-logic-optimizations)
 
 # Day 1
 - First we look at the introduction to the RISC-V ISA(Instructiion Set Architecture). Supposing we need to execute a C program on a particular hardware. First the C-program is converted into Assembly Code( here for RISC-V processor). Then the assembly code is converted into binary. An RTL implements this code for the particular layout of the RISC-V processor and the output is visible.
@@ -637,3 +640,12 @@ write_verilog -noattr mult8_net.v
 As we can see y is a concatenation of 'aa'.
 
 # RTL design using Verilog with SKY130 Technology - Day 3
+## Introductiion to Optimizations
+
+**Constant Propagation and Boolean Logic Optimization**
+- Constant propagation occurs when a value that is a 0 or 1 propagates down the path of a circuit to give us an effecient version of the existing circuit through which it is propogating.
+- Boolean logic optimization is done by synthesis tools to get a very optimized logic that can be implemented effeciently and easily. For example the equation "assign y = a?(b?c:(c?a:0)):(!c)" reduces to something as simple as "y = a&c".
+- Constant propogation occurs in sequential logic circuits also; but only if the immediate output of the logic circuit is a constant value. Then it can be optimized.
+
+## Combinational Logic Optimization
+

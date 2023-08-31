@@ -34,7 +34,7 @@
   - [Interesting Optimizations](#interesting-optimizations)
 
 ## RTL design using Verilog with SKY130 Technology - Day 3
-  - [Programs used for the day]()
+  - [Programs used for the day](https://github.com/AniruddhaN2203/pes_asic_class/tree/main/Iverilog%20DAY_3)
   - [Introductiion to Optimizations](#introduction-to-optimizations)
   - [Combinational Logic Optimizations](#combinational-logic-optimizations)
 

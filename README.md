@@ -648,4 +648,14 @@ As we can see y is a concatenation of 'aa'.
 - Constant propogation occurs in sequential logic circuits also; but only if the immediate output of the logic circuit is a constant value. Then it can be optimized.
 
 ## Combinational Logic Optimization
+Now let us look at some programs here. First we perform the following steps as usual and get into the required directory
+
+![image](https://github.com/AniruddhaN2203/pes_asic_class/assets/142299140/d67f51d4-8e3d-4838-9472-1c9dc5efe2ed)
+
+Our first program is this
+![image](https://github.com/AniruddhaN2203/pes_asic_class/assets/142299140/1cc8a24f-b3f7-48f1-811d-b2f57a15de2a)
+
+- The above programs is a 2:1 MUX.
+- When 'a = 1' 'y = b'; when 'a = 0' ' y = 0'.
+- The equation is as follows: y = a.b + a'.0 = ab. 
 

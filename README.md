@@ -1,4 +1,4 @@
-![image](https://github.com/AniruddhaN2203/pes_asic_class/assets/142299140/59656104-8e32-46bb-8b05-8dc9a30909da)# pes_asic_class
+# pes_asic_class
 
 
 
@@ -674,7 +674,21 @@ read_liberty -lib ../my_lib/lib/sky130_fd_sc_hd__tt_025C_1v80.lib
 ![image](https://github.com/AniruddhaN2203/pes_asic_class/assets/142299140/20693ed6-4a6d-4c9b-8e2a-ec92f27bfafe)
 
 - The following should be displayed on execution.
-- Now we need to type a command to do the constant propagation process. This removes all unused cells and optimizes the design
+- Now we need to type a command to do the constant propagation process. This removes all unused cells and optimizes the design.
+```
+opt_clean -purge
+```
+- To link the library files to the design we type
+```
+abc -liberty ../my_lib//lib/sky130_fd_sc_hd__tt_025C_1v80.lib
+```
+![image](https://github.com/AniruddhaN2203/pes_asic_class/assets/142299140/c9ede176-be34-4cd6-8bf2-86290246d3b5)
+
+- This shows the following results and then we can type ```show``` to display the design.
+
+![image](https://github.com/AniruddhaN2203/pes_asic_class/assets/142299140/d9e446f8-3c7a-4629-afc5-1076dd941df9)
+- The above design complies with the equation of the AND gate that we obtained
+
 
 I--------------------------------------------------------------------------------------------------------------------I
 

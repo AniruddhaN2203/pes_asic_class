@@ -1068,7 +1068,7 @@ dfflibmap -liberty ../my_lib/lib/sky130_fd_sc_hd__tt_025C_1v80.lib
 
 ## Sequential Optimizations for Unused Outputs
 
-The first program we will be looking at is as follows:
+**The first program we will be looking at is as follows:**
 
 ![image](https://github.com/AniruddhaN2203/pes_asic_class/assets/142299140/daf00bb9-aef9-45dc-a86c-176e61b5e09a)
 - This program represents a 3-bit up counter
@@ -1099,3 +1099,35 @@ since we are dealing with flops.
 - The 'Q' pin is connected to the bit 0, which is the count. That 'Q' pin is connected to 'q' which is our output.
 - It is also going to an inverter which is coming back as an input to the Flop. This is like a toggle state since 0th bit of count always toggles.
 - The two unused bits are completely optimized, since they are not connected directly to any primary output.
+
+**The second program we will be looking at is as follows:**
+
+![image](https://github.com/AniruddhaN2203/pes_asic_class/assets/142299140/72b0e0fe-9d10-40d4-92a4-3c838b2e5fe4)
+- This program is a modified version of the previous program.
+- In this all thre bits are mapped with an expectation to get 3 synthesized flops.
+
+Now let us synthesize the design on yosys.
+
+![image](https://github.com/AniruddhaN2203/pes_asic_class/assets/142299140/a62f3c61-0d23-434c-98ac-a8ac8285b57a)
+- We import the cells from the library file and read the verilog file of the required command.
+- Now we synthesize the design.
+
+![image](https://github.com/AniruddhaN2203/pes_asic_class/assets/142299140/73948679-7c9e-490c-ab19-7018beb5832c)
+- These are the results displayed. As we can see 3 Flops are synthesized.
+- Then we use the command
+```
+dfflibmap -liberty ../my_lib/lib/sky130_fd_sc_hd__tt_025C_1v80.lib
+```
+since we are dealing with flops.
+- Now we link the library file to the design.
+
+![image](https://github.com/AniruddhaN2203/pes_asic_class/assets/142299140/d49c5c1e-95bf-43dd-9054-e9d177f574f1)
+- These are the displayed results.
+- Now we type ```show``` to display the results.
+
+![image](https://github.com/AniruddhaN2203/pes_asic_class/assets/142299140/6029e9e7-eefb-49aa-afe2-66a89aca6a70)
+- As we can see there are three Flops.
+- Each Flop has a bit connected to to it.
+- Each bit is coming to the adder logic present in the middle of the design.
+- The NOR gate from which the output 'q' comes out has connections from all three bits at A, B and C(inverted).
+- The desired output required is q = count[2].count[1]'.count[0]'

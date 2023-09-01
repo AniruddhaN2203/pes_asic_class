@@ -846,3 +846,40 @@ abc -liberty ../my_lib//lib/sky130_fd_sc_hd__tt_025C_1v80.lib
 - 'y' is independent of all other inputs.
 
 ## Sequential Logic Optimization
+
+The program that we will be looking at first is this:
+
+![image](https://github.com/AniruddhaN2203/pes_asic_class/assets/142299140/3ba2abc0-d20f-438e-b281-8cb3836e86ea)
+- The working of the program obove is as follows.
+- It is a D Flip Flop with a reset and D = 1 always.
+- If Reset is active the output is always 0.
+- If Reset is not active, then only on positive edge of the clock the output is D = 1.
+
+Let us now look at the waveform simulation.
+
+![image](https://github.com/AniruddhaN2203/pes_asic_class/assets/142299140/5c53f6c9-3b1f-46b8-8ddf-fb59b2c53fd1)
+- First we use the iverilog command to read both the design and the test bench code
+```
+iverilog dff_const1.v tb_dff_const1.v
+```
+- Now we type ```./a.out```. The vcd file is generated. We can open this on gtkwave using the command
+```
+gtkwave tb_dff_const1.vcd
+```
+
+The waveform is as follows:
+
+![image](https://github.com/AniruddhaN2203/pes_asic_class/assets/142299140/5273df65-9157-4c94-b5d1-86989b88a406)
+- As we can see as long as Reset is 1, the output 'q' is 0.
+- When Reset is 0 and even the clock being 0, the output does not change yet.
+- Only when the clock is 1, the output 'q' is also 1.
+
+The second program is as follows:
+
+![image](https://github.com/AniruddhaN2203/pes_asic_class/assets/142299140/48c202e9-33a4-4a18-9daa-c070ba67b4fb)
+- It is also a D Flip Flop with a reset(it acts like a set since it is set to 1) and D = 1 always.
+- If Reset is active the output is always 1
+- If reset is not active, then even on postitive edge of clock the output remains 1.
+- Hence in any case whatsoever the output is always 1.
+
+

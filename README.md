@@ -797,10 +797,49 @@ read_liberty -lib ../my_lib/lib/sky130_fd_sc_hd__tt_025C_1v80.lib
 
 ![image](https://github.com/AniruddhaN2203/pes_asic_class/assets/142299140/88a358ec-09c8-43cb-9ca5-e08a926f24f1)
 - The above results should be displayed.
-- Now since there are multiple modules we first use the command ```flatten``` before using the command ```opt_clean -purge``` for constant propagation. This will remove the heirarchies and when we display the final design it will display as a gate level synthesis.
+- Now since there are multiple modules we first use the command ```flatten``` before using the command ```opt_clean -purge``` for constant propagation. This will remove the hierarchies and when we display the final design it will display as a gate level synthesis.
 - We link the library file to the design.
+```
+abc -liberty ../my_lib//lib/sky130_fd_sc_hd__tt_025C_1v80.lib
+```
 - Then we type ```show multiple_module_opt``` to display the required synthesis, since there are other sub modules in the file as well.
 
   ![image](https://github.com/AniruddhaN2203/pes_asic_class/assets/142299140/7ac6e40e-c028-40fd-ae58-7cf44d81ea74)
 - Here the final output 'y' is independent of 'd'.
 - As required 2 inputs 'a' and 'b' have been put through the AND operation and the result of that has been put through the OR operation with 'c'.
+
+I-------------------------------------------------------------------------------------------------------------------I
+
+The sixth program is as follows:
+
+![image](https://github.com/AniruddhaN2203/pes_asic_class/assets/142299140/ccd5ca73-6c1d-4581-a8f9-2e24e670947e)
+
+- We derive the equation of the above design.
+- n1 = a.0 = 0
+- n2 = b.c
+- n3 = b.c.d
+- y = b.c.d.0 = 0
+
+Let us synthesize this design
+
+![image](https://github.com/AniruddhaN2203/pes_asic_class/assets/142299140/18cdc6fd-efa3-4987-bd9b-335a3174cdb5)
+
+- First we imported the required cells from the library file.
+- We use the command
+```
+read_liberty -lib ../my_lib/lib/sky130_fd_sc_hd__tt_025C_1v80.lib
+```
+- Use the same commands mentioned above for reading the verliog file and synthesizing the design as done in the previous programs.
+
+![image](https://github.com/AniruddhaN2203/pes_asic_class/assets/142299140/fa372740-a075-439e-a22f-fb1289b371f7)
+
+- We use the ```flatten``` command to get rid of hierarchies and display at gate level. Then we use the ```opt_clean -purge``` for constant propagation.
+- We then link the library file to the design using the command
+```
+abc -liberty ../my_lib//lib/sky130_fd_sc_hd__tt_025C_1v80.lib
+```
+- Then we type ```show multiple_module_opt2``` to display the select module.
+
+![image](https://github.com/AniruddhaN2203/pes_asic_class/assets/142299140/a60111d3-a029-4b18-a01a-9794736357a2)
+- Here the final output 'y' is mapped to 0, which is what we derived in the above eqations.
+- 'y' is independent of all other inputs.

@@ -945,7 +945,11 @@ I-------------------------------------------------------------------------------
 
 ![image](https://github.com/AniruddhaN2203/pes_asic_class/assets/142299140/20ba307e-b12c-4df6-a02d-350289260d16)
 - This program has two Flops.
-- The output of one flop is connected to other and the both have to sane Reset and clock signal
+- The output of one flop is connected to other and the both have to sane Reset and clock signal.
+
+Let us look at the waveform simulation.
+
+
 
 
 

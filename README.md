@@ -985,6 +985,17 @@ I-------------------------------------------------------------------------------
 
 **The fourth program is as follows:**
 
+![image](https://github.com/AniruddhaN2203/pes_asic_class/assets/142299140/b0b84a7d-aeb9-42e0-8082-0dcd1f9b7f43)
+- This program has two flops.
+- The output of the first flop is connected to the input signal of the second flop. They both have a similar clock and a Reset signal
 
+Let us look at the waveform simulation
 
+![image](https://github.com/AniruddhaN2203/pes_asic_class/assets/142299140/3072f863-b166-45fc-aa4f-495fc385955e)
+- We run the same Iverliog commands as before to read the files and generate the a.out file.
+- Running the vcd file in gtkwave we obtain the following waveform.
 
+![image](https://github.com/AniruddhaN2203/pes_asic_class/assets/142299140/741ead01-5b9f-4f18-9dc4-675b18e40c9d)
+- As we can see the output 'q' is always 1.
+- If Reset is high, then both 'q' and 'q1' are set to 1
+- When Reset is low, 'q1' is set to a high value. Since even during the T(clock to q) delay 'q1'

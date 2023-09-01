@@ -775,3 +775,7 @@ Let us synthesize this design
 
 I-------------------------------------------------------------------------------------------------------------------I
  
+The fifthe program is as follows:
+
+![image](https://github.com/AniruddhaN2203/pes_asic_class/assets/142299140/89ea24d6-8bdf-49b6-91b7-08eaf58500cc)
+

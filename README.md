@@ -949,7 +949,41 @@ I-------------------------------------------------------------------------------
 
 Let us look at the waveform simulation.
 
+![image](https://github.com/AniruddhaN2203/pes_asic_class/assets/142299140/1a78647b-7826-4aef-8fc2-e1bcbb865bb8)
+- We run the same Iverliog commands as before to read the files and generate the a.out file.
+- Running the vcd file in gtkwave we obtain the following waveform.
 
+![image](https://github.com/AniruddhaN2203/pes_asic_class/assets/142299140/f3193573-8f23-499f-92d8-0f170216234c)
+- 'q' is low only for one cycle of its entire duration because of the T(clock to q) delay.
+- 'q1' activates to a high value after a slight delay when to clock has a positive edge.
+- During this delay 'q' remains 0 and hence, for one clock cycle it stays in the same state until the next positive edge of the clock.
+
+Now we synthesize the design using yosys
+
+![image](https://github.com/AniruddhaN2203/pes_asic_class/assets/142299140/eb14a510-4d4a-4538-8e4e-7e73db93e57a)
+- We import the cells to be used from the library file.
+- We use the usual commands to read the verilog file and synthesize the design
+
+![image](https://github.com/AniruddhaN2203/pes_asic_class/assets/142299140/fea1e918-6771-4e9c-83f2-c72b20b0c35e)
+- These are the results displayed. As we can see two Flops are generated.
+- Then we use the command
+```
+dfflibmap -liberty ../my_lib/lib/sky130_fd_sc_hd__tt_025C_1v80.lib
+```
+since we are dealing with flops.
+
+![image](https://github.com/AniruddhaN2203/pes_asic_class/assets/142299140/08026675-8713-450d-9dcd-62e4bff5940c)
+- These are the results displayed. Then we link the library file to the design.
+
+![image](https://github.com/AniruddhaN2203/pes_asic_class/assets/142299140/fb36b78a-68ff-4596-a76a-2f1068556323)
+- We type ```show``` to view the design.
+
+![image](https://github.com/AniruddhaN2203/pes_asic_class/assets/142299140/e8180209-547b-4c12-a783-75bc4040a017)
+- As we can see there are two flops. Output of the first in connected the second one and both have the same clock and reset.
+
+I---------------------------------------------------------------------------------------------------------------------I
+
+**The fourth program is as follows:**
 
 
 

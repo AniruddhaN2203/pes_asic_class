@@ -653,7 +653,7 @@ Now let us look at some programs here. First we perform the following steps as u
 
 ![image](https://github.com/AniruddhaN2203/pes_asic_class/assets/142299140/d67f51d4-8e3d-4838-9472-1c9dc5efe2ed)
 
-Our first program is as follows:
+**Our first program is as follows:**
 
 ![image](https://github.com/AniruddhaN2203/pes_asic_class/assets/142299140/1cc8a24f-b3f7-48f1-811d-b2f57a15de2a)
 
@@ -693,7 +693,7 @@ abc -liberty ../my_lib//lib/sky130_fd_sc_hd__tt_025C_1v80.lib
 
 I--------------------------------------------------------------------------------------------------------------------I
 
-The second program is as follows:
+**The second program is as follows:**
 
 ![image](https://github.com/AniruddhaN2203/pes_asic_class/assets/142299140/4864ee17-50e3-4f0c-832d-1bdbd969feb4)
 
@@ -723,7 +723,7 @@ abc -liberty ../my_lib//lib/sky130_fd_sc_hd__tt_025C_1v80.lib
 
 I--------------------------------------------------------------------------------------------------------------------I
 
-The third program is as follows:
+**The third program is as follows:**
 
 ![Screenshot from 2023-09-01 00-54-53](https://github.com/AniruddhaN2203/pes_asic_class/assets/142299140/70bc7ef0-d475-4ac9-8475-a716ba09319c)
 
@@ -749,7 +749,7 @@ Let us synthesize this design
 
 I--------------------------------------------------------------------------------------------------------------------I
 
-The fourth program is as follows:
+**The fourth program is as follows:**
 
 ![image](https://github.com/AniruddhaN2203/pes_asic_class/assets/142299140/1b12cfd8-7490-4b4b-944c-b65bcd28c56f)
 
@@ -776,7 +776,7 @@ Let us synthesize this design
 
 I-------------------------------------------------------------------------------------------------------------------I
  
-The fifthe program is as follows:
+**The fifth program is as follows:**
 
 ![image](https://github.com/AniruddhaN2203/pes_asic_class/assets/142299140/89ea24d6-8bdf-49b6-91b7-08eaf58500cc)
 
@@ -811,7 +811,7 @@ abc -liberty ../my_lib//lib/sky130_fd_sc_hd__tt_025C_1v80.lib
 
 I-------------------------------------------------------------------------------------------------------------------I
 
-The sixth program is as follows:
+**The sixth program is as follows:**
 
 ![image](https://github.com/AniruddhaN2203/pes_asic_class/assets/142299140/ccd5ca73-6c1d-4581-a8f9-2e24e670947e)
 
@@ -847,7 +847,7 @@ abc -liberty ../my_lib//lib/sky130_fd_sc_hd__tt_025C_1v80.lib
 
 ## Sequential Logic Optimizations
 
-The program that we will be looking at first is this:
+**The program that we will be looking at first is this:**
 
 ![image](https://github.com/AniruddhaN2203/pes_asic_class/assets/142299140/3ba2abc0-d20f-438e-b281-8cb3836e86ea)
 - The working of the program obove is as follows.
@@ -874,7 +874,34 @@ The waveform is as follows:
 - When Reset is 0 and even the clock being 0, the output does not change yet.
 - Only when the clock is 1, the output 'q' is also 1.
 
-The second program is as follows:
+Now we synthesize the design using yosys.
+
+![image](https://github.com/AniruddhaN2203/pes_asic_class/assets/142299140/8aaf441e-d53e-4f8c-ac70-e1681a102c23)
+- We import the cells and read the verilog file as usual using ```read_verilog dff_const1.v```.
+- Then we type ```synth -top dff_const1``` for synthesizing the design.
+- The output should be as follows
+
+![image](https://github.com/AniruddhaN2203/pes_asic_class/assets/142299140/649baa74-938d-44a4-a2ea-c71f2e7dd654)
+- We use the command
+```
+dfflibmap -liberty ../my_lib/lib/sky130_fd_sc_hd__tt_025C_1v80.lib
+```
+since we are using a flop here.
+
+![image](https://github.com/AniruddhaN2203/pes_asic_class/assets/142299140/d4de6ef2-7c8d-4c68-8714-710904bd896a)
+- The following should be the result and the we link the library file to the design using the command
+```
+abc -liberty ../my_lib//lib/sky130_fd_sc_hd__tt_025C_1v80.lib
+```
+- Then we type ```show``` to view the design.
+
+![image](https://github.com/AniruddhaN2203/pes_asic_class/assets/142299140/6a2e962f-9be3-4a2a-9849-9a5619862a94)
+- The DFF is visible on the right with a Reset, clk and D pins.
+- Reset is expected to be active low, but since we have given an active high Reset, there is an inverter that is used by the tool to do the job.
+
+I---------------------------------------------------------------------------------------------------------------------I
+
+**The second program is as follows:**
 
 ![image](https://github.com/AniruddhaN2203/pes_asic_class/assets/142299140/48c202e9-33a4-4a18-9daa-c070ba67b4fb)
 - It is also a D Flip Flop with a reset(it acts like a set since it is set to 1) and D = 1 always.

@@ -1067,3 +1067,29 @@ dfflibmap -liberty ../my_lib/lib/sky130_fd_sc_hd__tt_025C_1v80.lib
 - Inverter is seen as the synthesis expects an active low Reset. We give an active high reset. This is converted by the tool to active low with inverters
 
 ## Sequential Optimizations for Unused Outputs
+
+The first program we will be looking at is as follows:
+
+![image](https://github.com/AniruddhaN2203/pes_asic_class/assets/142299140/daf00bb9-aef9-45dc-a86c-176e61b5e09a)
+- This program represents a 3-bit up counter
+- The output gives priority to only one of the 3 bits.
+- The other two bits are essentially unused.
+
+Now let us synthesize the design on yosys
+
+![image](https://github.com/AniruddhaN2203/pes_asic_class/assets/142299140/da0c9745-036f-447e-a2b5-c27ad22dfb93)
+- We import the cells from the library file and read the verilog file of the required command.
+- Now we synthesize the design.
+
+![image](https://github.com/AniruddhaN2203/pes_asic_class/assets/142299140/150c554d-e184-466b-a383-dd5549122ea4)
+- These are the results displayed. Only one Flop is synthesized.
+- Then we use the command
+```
+dfflibmap -liberty ../my_lib/lib/sky130_fd_sc_hd__tt_025C_1v80.lib
+```
+since we are dealing with flops.
+- Now we link the library file to the design.
+
+![image](https://github.com/AniruddhaN2203/pes_asic_class/assets/142299140/6dae064f-2e74-4cf8-bf9d-dc5e384bd49a)
+- These are the displayed results.
+- Now we type ```show``` to display the results.

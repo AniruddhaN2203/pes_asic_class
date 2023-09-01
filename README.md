@@ -38,6 +38,7 @@
   - [Introduction to Optimizations](#introduction-to-optimizations)
   - [Combinational Logic Optimizations](#combinational-logic-optimizations)
   - [Sequential Logic Optimizations](#sequential-logic-optimizations)
+  - [Sequential Optimizations for Unused Outputs](#sequential-optimizations-for-unused-outputs)
 
 # Day 1
 - First we look at the introduction to the RISC-V ISA(Instructiion Set Architecture). Supposing we need to execute a C program on a particular hardware. First the C-program is converted into Assembly Code( here for RISC-V processor). Then the assembly code is converted into binary. An RTL implements this code for the particular layout of the RISC-V processor and the output is visible.
@@ -989,7 +990,7 @@ I-------------------------------------------------------------------------------
 - This program has two flops.
 - The output of the first flop is connected to the input signal of the second flop. They both have a similar clock and a Reset signal
 
-Let us look at the waveform simulation
+Let us look at the waveform simulation.
 
 ![image](https://github.com/AniruddhaN2203/pes_asic_class/assets/142299140/3072f863-b166-45fc-aa4f-495fc385955e)
 - We run the same Iverliog commands as before to read the files and generate the a.out file.
@@ -1026,3 +1027,43 @@ since we are dealing with flops.
 I---------------------------------------------------------------------------------------------------------------------I
 
 **The fifth program is as follows:**
+
+![image](https://github.com/AniruddhaN2203/pes_asic_class/assets/142299140/0bc0a3e5-856c-4b20-938b-0d5b7b4b1928)
+- This program has two flops.
+- The output of the first flop is connected to the input signal of the second flop. They both have a similar clock and a Reset signal.
+
+Let us look at the waveform simulation.
+
+![image](https://github.com/AniruddhaN2203/pes_asic_class/assets/142299140/a22e187e-145d-4f41-be8b-73b9a43a9ae8)
+- We run the same Iverliog commands as before to read the files and generate the a.out file.
+- Running the vcd file in gtkwave we obtain the following waveform.
+
+![image](https://github.com/AniruddhaN2203/pes_asic_class/assets/142299140/b6096cb9-13e2-4aa6-8298-0fe19b9fbc15)
+- When Reset is high, we can see that both 'q1' and 'q' are low.
+- When Reset is low,'q1' goes to 1 on the positive edge of the clock.
+- Due to t(clock to q), 'q1' essentially remains at 0 during the positive edge of the clock.
+- Hence 'q' remains 0 for that cyle and goes to value 1, one cycle late compared to 'q1'.
+
+Now we synthesize the design using yosys
+
+![image](https://github.com/AniruddhaN2203/pes_asic_class/assets/142299140/07b3cbd2-4426-425a-b0b6-96e00f51771d)
+- We import the cells to be used from the library file.
+- We use the usual commands to read the verilog file and synthesize the design
+
+![image](https://github.com/AniruddhaN2203/pes_asic_class/assets/142299140/22c7bed5-d0d4-4bfa-8a91-bbb24ee0e136)
+- These are the results displayed. As we can see, we have two Flops being generated during synthesis.
+- Then we use the command
+```
+dfflibmap -liberty ../my_lib/lib/sky130_fd_sc_hd__tt_025C_1v80.lib
+```
+
+![image](https://github.com/AniruddhaN2203/pes_asic_class/assets/142299140/bfcf27e2-427c-4ee9-971a-7c596f15c91f)
+- These are the displayed results.
+- We then link the library file to the synthesized design.
+- We then type ```show``` to display the results.
+
+![image](https://github.com/AniruddhaN2203/pes_asic_class/assets/142299140/64f1e86e-5e3a-48d7-ac1f-181f9347d1ba)
+- As we can see there are two flops. Output of the first in connected the second one and both have the same clock and reset.
+- Inverter is seen as the synthesis expects an active low Reset. We give an active high reset. This is converted by the tool to active low with inverters
+
+## Sequential Optimizations for Unused Outputs

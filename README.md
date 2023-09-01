@@ -922,3 +922,31 @@ to check the waveform diagram.
 ![image](https://github.com/AniruddhaN2203/pes_asic_class/assets/142299140/98b7f7a2-6b52-4111-af3b-63cb22a0492c)
 - As we can see, the output 'q' remains equal to 1, no matter what state the Reset or clock is at.
 
+Now we synthesize the design using yosys
+
+![image](https://github.com/AniruddhaN2203/pes_asic_class/assets/142299140/ab8a42f1-c349-4e28-90d7-f56777ccda89)
+- We use the same commands as above to read and synthesize the design.
+- Since we have already used the command,
+```
+dfflibmap -liberty ../my_lib/lib/sky130_fd_sc_hd__tt_025C_1v80.lib
+```
+we don't have to call it again.
+
+![Screenshot from 2023-09-02 00-20-26](https://github.com/AniruddhaN2203/pes_asic_class/assets/142299140/6507195c-60df-4386-9b58-d94003cecfea)
+- The following result is displayed.
+- The linking of libraries doesn't work here as no cells are generated.
+
+![image](https://github.com/AniruddhaN2203/pes_asic_class/assets/142299140/b076d899-879d-4a75-857c-73a05a8345e0)
+- The output is a constant 1. Hence we don't have any flip flops or other cells here in the design.
+
+I---------------------------------------------------------------------------------------------------------------------I
+
+**The third program is as follows:**
+
+![image](https://github.com/AniruddhaN2203/pes_asic_class/assets/142299140/20ba307e-b12c-4df6-a02d-350289260d16)
+- This program has two Flops.
+- The output of one flop is connected to other and the both have to sane Reset and clock signal
+
+
+
+

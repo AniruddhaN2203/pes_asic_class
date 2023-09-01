@@ -1093,3 +1093,9 @@ since we are dealing with flops.
 ![image](https://github.com/AniruddhaN2203/pes_asic_class/assets/142299140/6dae064f-2e74-4cf8-bf9d-dc5e384bd49a)
 - These are the displayed results.
 - Now we type ```show``` to display the results.
+
+![image](https://github.com/AniruddhaN2203/pes_asic_class/assets/142299140/30537cc7-1316-4c5e-aec2-ade85a11039a)
+- We can see that there is only one Flop according to the report.
+- The 'Q' pin is connected to the bit 0, which is the count. That 'Q' pin is connected to 'q' which is our output.
+- It is also going to an inverter which is coming back as an input to the Flop. This is like a toggle state since 0th bit of count always toggles.
+- The two unused bits are completely optimized, since they are not connected directly to any primary output.

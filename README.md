@@ -37,6 +37,7 @@
   - [Programs used for the day](https://github.com/AniruddhaN2203/pes_asic_class/tree/main/Iverilog%20DAY_3)
   - [Introduction to Optimizations](#introduction-to-optimizations)
   - [Combinational Logic Optimizations](#combinational-logic-optimizations)
+  - [Sequential Logic Optimizations](#sequential-logic-optimizations)
 
 # Day 1
 - First we look at the introduction to the RISC-V ISA(Instructiion Set Architecture). Supposing we need to execute a C program on a particular hardware. First the C-program is converted into Assembly Code( here for RISC-V processor). Then the assembly code is converted into binary. An RTL implements this code for the particular layout of the RISC-V processor and the output is visible.
@@ -843,3 +844,5 @@ abc -liberty ../my_lib//lib/sky130_fd_sc_hd__tt_025C_1v80.lib
 ![image](https://github.com/AniruddhaN2203/pes_asic_class/assets/142299140/a60111d3-a029-4b18-a01a-9794736357a2)
 - Here the final output 'y' is mapped to 0, which is what we derived in the above eqations.
 - 'y' is independent of all other inputs.
+
+## Sequential Logic Optimization

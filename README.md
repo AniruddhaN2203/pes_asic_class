@@ -1021,6 +1021,8 @@ since we are dealing with flops.
 - We then type ```show``` to display the design.
 
 ![image](https://github.com/AniruddhaN2203/pes_asic_class/assets/142299140/25ee8e98-7d72-43a1-85bf-f287cfa05cf5)
-- As we can see both 'q' and 'q1'
-![image](https://github.com/AniruddhaN2203/pes_asic_class/assets/142299140/dfdb3a30-22a9-4b5d-bc73-7e9d75246016)
+- As we can see both 'q' and 'q1' have a constant value of 1 throughout the execution cycle.
 
+I---------------------------------------------------------------------------------------------------------------------I
+
+**The fifth program is as follows:**

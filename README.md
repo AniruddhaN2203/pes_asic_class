@@ -882,4 +882,16 @@ The second program is as follows:
 - If reset is not active, then even on postitive edge of clock the output remains 1.
 - Hence in any case whatsoever the output is always 1.
 
+Let us look at the waveform simulation.
+
+![image](https://github.com/AniruddhaN2203/pes_asic_class/assets/142299140/72c2286d-f7bf-409c-aa9f-b5f5dbf4218c)
+- Follow the same steps as the first program.
+- Use the command
+```
+gtkwave tb_dff_const2.vcd
+```
+to check the waveform diagram.
+
+![image](https://github.com/AniruddhaN2203/pes_asic_class/assets/142299140/98b7f7a2-6b52-4111-af3b-63cb22a0492c)
+- As we can see, the output 'q' remains equal to 1, no matter what state the Reset or clock is at.
 

@@ -779,3 +779,21 @@ The fifthe program is as follows:
 
 ![image](https://github.com/AniruddhaN2203/pes_asic_class/assets/142299140/89ea24d6-8bdf-49b6-91b7-08eaf58500cc)
 
+- Here we can derive the equation as follows and check it later by synthesizing the design.
+- n1 = a.1
+- n2 = n1 ^ 0
+- n3 = b^d
+- y = c + b.a
+
+Let us synthesize this design
+
+![image](https://github.com/AniruddhaN2203/pes_asic_class/assets/142299140/e8237e96-e2b5-4f94-9fe9-d251533ad542)
+- First we imported the required cells from the library file.
+- We use the command
+```
+read_liberty -lib ../my_lib/lib/sky130_fd_sc_hd__tt_025C_1v80.lib
+```
+- Use the same commands mentioned above for reading the verliog file and synthesizing the design as done in the previous programs.
+
+![image](https://github.com/AniruddhaN2203/pes_asic_class/assets/142299140/88a358ec-09c8-43cb-9ca5-e08a926f24f1)
+- The above results should be displayed.

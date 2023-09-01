@@ -845,7 +845,7 @@ abc -liberty ../my_lib//lib/sky130_fd_sc_hd__tt_025C_1v80.lib
 - Here the final output 'y' is mapped to 0, which is what we derived in the above eqations.
 - 'y' is independent of all other inputs.
 
-## Sequential Logic Optimization
+## Sequential Logic Optimizations
 
 The program that we will be looking at first is this:
 

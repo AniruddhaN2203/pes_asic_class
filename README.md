@@ -998,4 +998,29 @@ Let us look at the waveform simulation
 ![image](https://github.com/AniruddhaN2203/pes_asic_class/assets/142299140/741ead01-5b9f-4f18-9dc4-675b18e40c9d)
 - As we can see the output 'q' is always 1.
 - If Reset is high, then both 'q' and 'q1' are set to 1
-- When Reset is low, 'q1' is set to a high value. Since even during the T(clock to q) delay 'q1'
+- When Reset is low, 'q1' is set to a high value. Since even during the T(clock to q) delay 'q1' was 1, 'q' remains at 1.
+- Hence 'q' is 1 during the whole cycle.
+
+Now we synthesize the design using yosys
+
+![image](https://github.com/AniruddhaN2203/pes_asic_class/assets/142299140/c33ad07d-f960-423c-9e21-563db1275dc6)
+- We import the cells to be used from the library file.
+- We use the usual commands to read the verilog file and synthesize the design
+
+![image](https://github.com/AniruddhaN2203/pes_asic_class/assets/142299140/96495896-2f0e-4288-9103-244b5dfdf7ae)
+- These are the results displayed. As we can see no cells are generated.
+- Then we use the command
+```
+dfflibmap -liberty ../my_lib/lib/sky130_fd_sc_hd__tt_025C_1v80.lib
+```
+since we are dealing with flops.
+
+![image](https://github.com/AniruddhaN2203/pes_asic_class/assets/142299140/0d6fe6e5-dd3c-4872-96a6-6c85e3f83a26)
+- These are the results displayed.
+- Linking the library file to the design doesn't work becuase no cells are generated
+- We then type ```show``` to display the design.
+
+![image](https://github.com/AniruddhaN2203/pes_asic_class/assets/142299140/25ee8e98-7d72-43a1-85bf-f287cfa05cf5)
+- As we can see both 'q' and 'q1'
+![image](https://github.com/AniruddhaN2203/pes_asic_class/assets/142299140/dfdb3a30-22a9-4b5d-bc73-7e9d75246016)
+

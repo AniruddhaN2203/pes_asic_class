@@ -1279,3 +1279,5 @@ write_verilog -noattr bad_mux_net.v
 
 ![image](https://github.com/AniruddhaN2203/pes_asic_class/assets/142299140/b0122021-bf15-41eb-83c9-2e748f97564e)
 - The following netlist is generated.
+
+Now we take the netlist file instead of the RTL file and generate the waveform for cross checking

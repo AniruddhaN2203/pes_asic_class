@@ -1283,6 +1283,9 @@ write_verilog -noattr bad_mux_net.v
 
 Now we take the netlist file instead of the RTL file and generate the waveform for cross checking
 - First we must read the design and test bench file. Since the design file here is the netlist file, we must invoke the libraries with the respective cells to map the netlist commands to the them.
+```
+iverilog ../my_lib/verilog_model/primitives.v ../my_lib/verilog_model/sky130_fd_sc_hd.v bad_mux_net.v tb_bad_mux.v
+```
 
 ![image](https://github.com/AniruddhaN2203/pes_asic_class/assets/142299140/00b8de69-353c-4f9d-84fb-254d80eb78ed)
 - Now we type ```./a.out``` to generate the vcd file.
@@ -1331,7 +1334,43 @@ gtkwave tb_blocking_caveat.vcd
 
 Let us look at the synthesis and perform GLS
 
+![image](https://github.com/AniruddhaN2203/pes_asic_class/assets/142299140/76f2abcf-67ef-495b-af3d-807ad56fc668)
+- We import the cells and read the verilog file as usual using ```read_verilog blocking_caveat.v```.
+- Then we type ```synth -top blocking_caveat``` for synthesizing the design.
 
+![image](https://github.com/AniruddhaN2203/pes_asic_class/assets/142299140/df50ac1d-89b8-45c7-9438-1c63d2eac253)
+- The above results should be displayed.
+- Now we link the library files to the design using
+```
+abc -liberty ../my_lib//lib/sky130_fd_sc_hd__tt_025C_1v80.lib
+```
 
+![image](https://github.com/AniruddhaN2203/pes_asic_class/assets/142299140/ea9a4d3c-73cc-45df-9a38-cda4d8795953)
+- These are the displayed results and now we must generate a netlist file using the command
+```
+write_verilog blocking_caveat_net.v
+```
 
+The following netlist file is generated
 
+![image](https://github.com/AniruddhaN2203/pes_asic_class/assets/142299140/790a6474-4929-49c8-915e-8923a790e2ff)
+
+- Now we type ```show``` to look at the design that is synthesized.
+
+![image](https://github.com/AniruddhaN2203/pes_asic_class/assets/142299140/ec422da1-c3b7-49fc-8000-42e585b4a123)
+- We can see that it is an OR gate and an AND gate that is generated
+- The ouput of 'A2 OR A1' and 'B1' are fed to the AND gate.
+
+Now let us perform GLS
+
+![image](https://github.com/AniruddhaN2203/pes_asic_class/assets/142299140/8859c6a1-3c67-4625-9886-2650f42c66c4)
+- We type the command
+```
+iverilog ../my_lib/verilog_model/primitives.v ../my_lib/verilog_model/sky130_fd_sc_hd.v blocking_caveat_net.v tb_blocking_caveat.v
+```
+- Now we type ```./a.out``` to generate the vcd file.
+- Now we look at the waveform using
+```
+gtkwave tb_blocking_caveat.vcd
+```
+![image](https://github.com/AniruddhaN2203/pes_asic_class/assets/142299140/737ee3dd-dda4-4653-8e01-cd6f54e1c27b)waveform

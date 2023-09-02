@@ -1160,4 +1160,27 @@ since we are dealing with flops.
       - The non blocking statement executs all the RHS statements in an always block first and assigns it to the LHS.
       - This execution is done parallely.
 
-  
+## Lab on GLS and Synthesis Simulation Mismatch
+**The first program we study is as follows:**
+
+![image](https://github.com/AniruddhaN2203/pes_asic_class/assets/142299140/bb857451-d41a-4350-9234-ac1e30fb915f)
+- The above program is a design of a 2:1 MUX.
+- When 'sel = 1', 'y = i1'. Otherwise 'y = i0'.
+
+Now we look at the waveform.
+
+![image](https://github.com/AniruddhaN2203/pes_asic_class/assets/142299140/32e66647-294b-4098-b4f8-96b99c097503)
+- First we read the design and testbench file using the command
+```
+iverilog ternary_operator_mux.v tb_ternary_operator_mux.v
+```
+- Now we type ```./a.out``` to generate the .vcd file.
+- Then to see the waveform we type the command
+```
+gtkwave tb_ternary_operator_mux.vcd
+```
+
+![image](https://github.com/AniruddhaN2203/pes_asic_class/assets/142299140/7c2f2773-f5c2-4330-869d-ceddfa91010f)
+- As we can see when 'sel = 1', 'y = i1'. Otherwise 'y = i0'.
+
+

@@ -42,7 +42,7 @@
 
 ## RTL design using Verilog with SKY130 Technology - Day 4
   - [Programs used for the day](https://github.com/AniruddhaN2203/pes_asic_class/tree/main/Iverilog%20DAY_4)
-  - [GLS, Synthesis Simulation Mismatch and Blocking/NonBlocking Statements](#gls,-synthesis-simulation-mismatch-and-blocking/nonblocking-statements)
+  - [GLS Synthesis Simulation Mismatch and Blocking NonBlocking Statements](#gls-synthesis-simulation-mismatch-and-blocking-nonblocking-statements)
 
 # Day 1
 - First we look at the introduction to the RISC-V ISA(Instructiion Set Architecture). Supposing we need to execute a C program on a particular hardware. First the C-program is converted into Assembly Code( here for RISC-V processor). Then the assembly code is converted into binary. An RTL implements this code for the particular layout of the RISC-V processor and the output is visible.
@@ -1137,4 +1137,4 @@ since we are dealing with flops.
 - The desired output required is q = count[2].count[1]'.count[0]'
 
 # RTL design using Verilog with SKY130 Technology - Day 4
-## GLS, Synthesis Simulation Mismatch and Blocking/NonBlocking Statements
+## GLS Synthesis Simulation Mismatch and Blocking NonBlocking Statements

@@ -1138,3 +1138,26 @@ since we are dealing with flops.
 
 # RTL design using Verilog with SKY130 Technology - Day 4
 ## GLS Synthesis Simulation Mismatch and Blocking NonBlocking Statements
+
+**GLS(Gate Level Simulation)**
+- A netlist file can be generated from the RTL file of a design.
+- This netlist file can be tested with the same test bench used for the RTL file.
+- Both files with the test bench should essentially return the same outputs.
+- This can be used to validate a design.
+- Gate level verilog models help map the netlist file to the cells that are called in it.
+
+**Synthesis Simulatiion Mismatch**
+- Synthesis simulation mismatch occurs due to various reasons. Some are listed below
+  - Missing elements in sensitivity list
+    - If any variable that undergoes change in the design is not mentioned in the sensitivity list, the full potential of the design is not extracted.
+    - The simulation will only take into account the variables that change in the design.
+    - The synthesis on the other hand doesn't check the sensitivity list and synthesizes whatever design the program is telling it to.
+  - Blocking and Non Blocking Statments in Verilog
+    - Blocking Statement '='.
+      - The blocking statemnt in an always block always executes the first statement by blocking the operation of the second statement.
+      - Only when the operation is fully complete it moves to the next statement.
+    - Non Blocking Statement '<='.
+      - The non blocking statement executs all the RHS statements in an always block first and assigns it to the LHS.
+      - This execution is done parallely.
+
+  

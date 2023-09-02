@@ -1291,7 +1291,7 @@ iverilog ../my_lib/verilog_model/primitives.v ../my_lib/verilog_model/sky130_fd_
 - Now we type ```./a.out``` to generate the vcd file.
 - Now we look at the waveform using
 ```
-gtkwave tb_bad_mux_net.vcd
+gtkwave tb_bad_mux.vcd
 ```
 
 The waveform is as follows:
@@ -1373,4 +1373,10 @@ iverilog ../my_lib/verilog_model/primitives.v ../my_lib/verilog_model/sky130_fd_
 ```
 gtkwave tb_blocking_caveat.vcd
 ```
-![image](https://github.com/AniruddhaN2203/pes_asic_class/assets/142299140/737ee3dd-dda4-4653-8e01-cd6f54e1c27b)waveform
+
+![image](https://github.com/AniruddhaN2203/pes_asic_class/assets/142299140/737ee3dd-dda4-4653-8e01-cd6f54e1c27b)
+- The above waveform is displayed.
+- At the selected point we can see 'a = 0' and 'b = 0'.
+- This clearly shows that 'x = 0'.
+- From this we must get the value of 'd' as 0, since anything with AND operation performed on it with 0 is 0.
+- Hence there is a mismatch in the Simulation and Synthesis caused by blocking statement.

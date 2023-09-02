@@ -1230,3 +1230,52 @@ The waveform is as follows:
 ![image](https://github.com/AniruddhaN2203/pes_asic_class/assets/142299140/e7f3ee96-1877-4fd2-82bf-e274dd9eab4d)
 - As we can see when 'sel = 1', 'y = i1'. Otherwise 'y = i0'.
 - Hence the design is validated.
+
+
+**Now we look at a case of Simulation and Synthesis mismatch**
+
+The first program we look at is as follows:
+
+![image](https://github.com/AniruddhaN2203/pes_asic_class/assets/142299140/197782aa-4479-45d4-b558-389c5fce0409)
+- The above program is a 2:1 MUX which only works when 'sel' changes and not any other parameter.
+
+Let us look at the waveform.
+
+![image](https://github.com/AniruddhaN2203/pes_asic_class/assets/142299140/5ca643f1-060e-4087-aee5-9b89425c01fa)
+- First we read the design and testbench file using the command
+```
+iverilog bad_mux.v tb_bad_mux.v
+```
+- Now we type ```./a.out``` to generate the .vcd file.
+- Then to see the waveform we type the command
+```
+gtkwave tb_bad_mux.vcd
+```
+The waveform is as follows:
+
+![image](https://github.com/AniruddhaN2203/pes_asic_class/assets/142299140/7d2cd46c-2de2-4904-b5f0-4249697a7a7c)
+- Here we can see that the state of the MUX changes only when there is a change in 'sel'.
+- This is almost like the behaviour of a Flop.
+
+Now let us synthesize the design
+
+![image](https://github.com/AniruddhaN2203/pes_asic_class/assets/142299140/6d1218b4-2151-4dad-952a-71b22fcd3cb2)
+- We import the cells and read the verilog file as usual using ```read_verilog bad_mux.v```.
+- Then we type ```synth -top bad_mux``` for synthesizing the design.
+
+![image](https://github.com/AniruddhaN2203/pes_asic_class/assets/142299140/958898df-b1eb-4e2e-ac43-ee469d81cf37)
+- The above results should be displayed.
+- Now we link the library files to the design using
+```
+abc -liberty ../my_lib//lib/sky130_fd_sc_hd__tt_025C_1v80.lib
+```
+
+![image](https://github.com/AniruddhaN2203/pes_asic_class/assets/142299140/ee11b9c6-d233-4b29-814f-cb2b1c9ac6b4)
+- The following results should be displayed.
+- Then we generate the netlist file with the command
+```
+write_verilog -noattr bad_mux_net.v
+```
+
+![image](https://github.com/AniruddhaN2203/pes_asic_class/assets/142299140/b0122021-bf15-41eb-83c9-2e748f97564e)
+- The following netlist is generated.

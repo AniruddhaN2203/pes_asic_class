@@ -1212,4 +1212,20 @@ The following file is generated:
 - As we can see a 2:1 MUX is synthesized with the inputs given.
 
 Now let us perform the GLS
--
+- First we must read the design and test bench file. Since the design file here is the netlist file, we must invoke the libraries with the respective cells to map the netlist commands to the them.
+
+![image](https://github.com/AniruddhaN2203/pes_asic_class/assets/142299140/8f12a0f8-bb4a-4a13-ad90-516527f21616)
+- We type the command
+```
+iverilog ../my_lib/verilog_model/primitives.v ../my_lib/verilog_model/sky130_fd_sc_hd.v ternary_operator_mux_net.v tb_ternary_operator_mux.v
+```
+- Now we type ```./a.out``` to generate the vcd file.
+- Now we look at the waveform using
+```
+gtkwave tb_ternary_operator_mux_net.vcd
+```
+
+The waveform is as follows:
+![image](https://github.com/AniruddhaN2203/pes_asic_class/assets/142299140/e7f3ee96-1877-4fd2-82bf-e274dd9eab4d)
+- As we can see when 'sel = 1', 'y = i1'. Otherwise 'y = i0'.
+- Hence the design is validated.

@@ -1281,3 +1281,18 @@ write_verilog -noattr bad_mux_net.v
 - The following netlist is generated.
 
 Now we take the netlist file instead of the RTL file and generate the waveform for cross checking
+- First we must read the design and test bench file. Since the design file here is the netlist file, we must invoke the libraries with the respective cells to map the netlist commands to the them.
+
+![image](https://github.com/AniruddhaN2203/pes_asic_class/assets/142299140/00b8de69-353c-4f9d-84fb-254d80eb78ed)
+- Now we type ```./a.out``` to generate the vcd file.
+- Now we look at the waveform using
+```
+gtkwave tb_bad_mux_net.vcd
+```
+
+The waveform is as follows:
+
+![image](https://github.com/AniruddhaN2203/pes_asic_class/assets/142299140/47fa03c4-63c1-4189-bdc6-d9fb08492933)
+- This is the simulation of a normal 2:1 MUX.
+- As we can see when 'sel = 1', 'y = i1'. Otherwise 'y = i0'.
+- Hence there is a mismatch in the Simulation and Synthesis.

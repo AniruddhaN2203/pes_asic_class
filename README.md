@@ -44,6 +44,7 @@
   - [Programs used for the day](https://github.com/AniruddhaN2203/pes_asic_class/tree/main/Iverilog%20DAY_4)
   - [GLS Synthesis Simulation Mismatch and Blocking NonBlocking Statements](#gls-synthesis-simulation-mismatch-and-blocking-nonblocking-statements)
   - [Lab on GLS and Synthesis Simulation Mismatch](#lab-on-gls-and-synthesis-simulation-mismatch)
+  - [Lab on Synthesis Simulation Mismatch for Blocking Statement](#lab-on-synthesis-simulation-mismatch-for-blocking-statement)
 
 # Day 1
 - First we look at the introduction to the RISC-V ISA(Instructiion Set Architecture). Supposing we need to execute a C program on a particular hardware. First the C-program is converted into Assembly Code( here for RISC-V processor). Then the assembly code is converted into binary. An RTL implements this code for the particular layout of the RISC-V processor and the output is visible.
@@ -1295,4 +1296,6 @@ The waveform is as follows:
 ![image](https://github.com/AniruddhaN2203/pes_asic_class/assets/142299140/47fa03c4-63c1-4189-bdc6-d9fb08492933)
 - This is the simulation of a normal 2:1 MUX.
 - As we can see when 'sel = 1', 'y = i1'. Otherwise 'y = i0'.
-- Hence there is a mismatch in the Simulation and Synthesis.
+- Hence, there is a mismatch in the Simulation and Synthesis.
+
+## Lab on Synthesis Simulation Mismatch for Blocking Statement

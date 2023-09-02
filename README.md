@@ -1299,3 +1299,39 @@ The waveform is as follows:
 - Hence, there is a mismatch in the Simulation and Synthesis.
 
 ## Lab on Synthesis Simulation Mismatch for Blocking Statement
+
+The first program we are going to look at is as follows:
+
+![image](https://github.com/AniruddhaN2203/pes_asic_class/assets/142299140/937d869a-b32b-4df4-ac5b-ec47e2069605)
+- The general idea of this program is to first have an OR operation which goes as 'x = a | b'.
+- The output of this statement, that is 'x', is fed to an AND gate with another input which goes as 'd = x & c'.
+- But there is a catch. Due to usage of blocking statement 'd = x & c' gets executed first and then 'x = a | b' gets executed.
+- Hence, 'x' will look like a flopped output. The design is dependent on its old value, since the new value is calculated in the second statement
+
+Let us look at the waveform
+
+![image](https://github.com/AniruddhaN2203/pes_asic_class/assets/142299140/2f0966fc-7169-476b-a856-e376152130f0)
+- First we read the design and testbench file using the command
+```
+iverilog blocking_caveat.v tb_blocking_caveat.v
+```
+- Now we type ```./a.out``` to generate the .vcd file.
+- Then to see the waveform we type the command
+```
+gtkwave tb_blocking_caveat.vcd
+```
+
+![image](https://github.com/AniruddhaN2203/pes_asic_class/assets/142299140/792cbf44-2917-4085-ae8f-ab3bf1d03646)
+- At the selected point we can see 'a = 0' and 'b = 0'.
+- This clearly shows that 'x = 0'.
+- From this we must get the value of 'd' as 0, since anything with AND operation performed on it with 0 is 0.
+- But here we see that 'd = 1'. From this the only inference we can come up with is that the design is considering the older values of 'a' and 'b'.
+- Here at the selected point the older values of 'a' and 'b' are both 1. If the both are 1, then 'd = 1' makes sense.
+- Hence we see that improper usage of the blocking statement has caused the circuit to behave differently than expected.
+
+Let us look at the synthesis and perform GLS
+
+
+
+
+
